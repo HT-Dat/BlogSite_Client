@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./Login";
-import logo from "./logo.svg";
 import "./App.css";
 
 class App extends Component {
@@ -9,9 +8,9 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <Switch>
-            <Route exact path="/" component={Login} />
-          </Switch>
+          <Routes>
+            <Route exact path="/" element={<Login />} />
+          </Routes>
         </Router>
       </div>
     );
