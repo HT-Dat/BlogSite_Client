@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { initializeApp } from "firebase/app";
 import {
   GoogleAuthProvider,
@@ -88,4 +89,13 @@ const sendPasswordReset = async (email) => {
 };
 const logout = () => {
   signOut(auth);
+};
+export {
+  auth,
+  db,
+  signInWithGoogle,
+  logInWithEmailAndPassword,
+  registerWithEmailAndPassword,
+  sendPasswordReset,
+  logout,
 };
