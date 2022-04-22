@@ -1,20 +1,18 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Login from "./Login";
+import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "./firebase";
+import PageRoutes from "./routes/PageRoutes";
 import "./App.css";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Router>
-          <Routes>
-            <Route exact path="/" element={<Login />} />
-          </Routes>
-        </Router>
-      </div>
-    );
-  }
+function App() {
+  // eslint-disable-next-line
+  const [user, loading, error] = useAuthState(auth);
+
+  return (
+    <div className="App">
+      <PageRoutes loading={loading} />
+    </div>
+  );
 }
 
 export default App;
