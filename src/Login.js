@@ -13,7 +13,9 @@ function Login() {
       style={{ backgroundImage: `url(${bg})` }}
     >
       <div className="w-3/5 h-screen bg-yellow-300/75"></div>
-      <div className="grid place-items-center w-2/5 bg-white"></div>
+      <div className="grid place-items-center w-2/5 bg-white">
+        <div className="w-2/3"></div>
+      </div>
     </div>
   );
 }
