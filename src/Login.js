@@ -9,11 +9,11 @@ function Login() {
   const [password, setPassword] = useState("");
   return (
     <div
-      className="flex flex-row bg-no-repeat bg-cover"
+      className="flex-row md:flex bg-no-repeat bg-cover"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="w-3/5 h-screen bg-yellow-300/75"></div>
-      <div className="grid place-items-center w-2/5 bg-white">
+      <div className="w-3/5 h-screen bg-yellow-300/75 hidden md:inline-block	"></div>
+      <div className="grid place-items-center sm:w-full md:w-2/5 bg-white">
         <div className="w-2/3">
           <div>
             <div className="text-2xl font-bold">Welcome Back!</div>
