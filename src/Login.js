@@ -14,7 +14,14 @@ function Login() {
     >
       <div className="w-3/5 h-screen bg-yellow-300/75"></div>
       <div className="grid place-items-center w-2/5 bg-white">
-        <div className="w-2/3"></div>
+        <div className="w-2/3">
+          <div>
+            <div className="text-2xl font-bold">Welcome Back!</div>
+            <div className="text-gray-600 pt-2 text">
+              Please sign in to your account
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
