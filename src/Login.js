@@ -21,6 +21,28 @@ function Login() {
               Please sign in to your account
             </div>
           </div>
+          <div className="grid place-items-start pt-10">
+            <div className="w-full bg-gradient-to-t from-black/25 via-transparent rounded-full h-12 p-px">
+              <input
+                type="text"
+                className="w-full h-full border-none rounded-full"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="E-mail Address"
+              />
+            </div>
+          </div>
+          <div className="grid place-items-start mt-5">
+            <div className="w-full bg-gradient-to-t from-black/25 via-transparent rounded-full h-12 p-px">
+              <input
+                type="password"
+                className="w-full h-full border-none rounded-full"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Password"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
