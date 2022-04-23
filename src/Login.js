@@ -68,6 +68,18 @@ function Login() {
               Register now.
             </Link>{" "}
           </div>
+          <div className="flex justify-center items-center h-10">
+            <hr className="w-10" />
+            <div className="text-gray-400">or continute with</div>
+            <hr className="w-10" />
+          </div>
+          <div
+            className="flex justify-center items-center cursor-pointer px-12 py-3 mt-5 font-semibold text-gray-900 bg-white border-2 border-gray-500 rounded-full shadow outline-none hover:bg-blue-50 hover:border-blue-400 hover:shadow-2xl focus:outline-none"
+            onClick={signInWithGoogle}
+          >
+            <img src={glogo} />
+            <p className="pl-5">Sign in with Google</p>
+          </div>
         </div>
       </div>
     </div>
