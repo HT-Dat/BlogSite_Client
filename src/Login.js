@@ -9,7 +9,7 @@ function Login() {
   const [password, setPassword] = useState("");
   return (
     <div
-      className="flex-row md:grid grid-cols-5 bg-no-repeat bg-cover"
+      className="flex-row md:grid grid-cols-5 bg-no-repeat bg-cover text-center"
       style={{ backgroundImage: `url(${bg})` }}
     >
       <div className="col-span-3 min-h-screen bg-yellow-300/75 hidden md:inline-block	"></div>
