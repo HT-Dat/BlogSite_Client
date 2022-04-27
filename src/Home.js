@@ -3,6 +3,7 @@ import { AiOutlineDownload, AiOutlineArrowRight } from "react-icons/ai";
 import { FaReact, FaDocker } from "react-icons/fa";
 import { SiDotnet } from "react-icons/si";
 import MyPictureBig from "./assets/my-picture-1.png";
+import MyAvatar from "./assets/my-picture-2.png";
 function Home() {
   return (
     <div className="snap-y snap-mandatory h-screen overflow-scroll ">
@@ -69,7 +70,34 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-amber-300 h-96 w-screen -skew-y-3 mt-48 mb-20"></div>
+        <div className="bg-amber-300 h-96 w-screen -skew-y-3 mt-20 mb-20">
+          <div className="flex items-center justify-center skew-y-3 h-full">
+            <div className="border-4 bg-white rounded-full w-60 h-60 overflow-hidden">
+              <img src={MyAvatar} className="object-center" />
+            </div>
+            <div className="w-7/12 pl-20 text-lg">
+              <p className="pb-5">
+                Hi, I'm Hồ Tiến Đạt, an undergraduate developer student from
+                Vietnam. I have been working on web development for 3 years now,
+                while still studying at university. Had my own project, coded
+                mostly in Javascript and C#.
+              </p>
+              <p>
+                Having finished the internship program at FPT Retail company
+                with flying colors (9.8 in 10 total). In my short time there, I
+                have already contributed to building a system that helps
+                business analysts to send, distributing documents, procedures to
+                employees at the shop
+              </p>
+              <p>
+                I also love doing open source development, one of my them is a
+                published extension on chrome web store made by Javascript with
+                over 20k+ users. It gives me a wonderful feeling of achievement
+                and joy which I cannot explain in words.
+              </p>
+            </div>
+          </div>
+        </div>
         <div className="bg-amber-300 h-96 skew-y-3"></div>
       </div>
 
