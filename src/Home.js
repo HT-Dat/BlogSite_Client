@@ -1,12 +1,16 @@
 import React from "react";
-import { AiOutlineDownload, AiOutlineArrowRight } from "react-icons/ai";
+import {
+  AiOutlineDownload,
+  AiOutlineArrowRight,
+  AiOutlinePushpin,
+} from "react-icons/ai";
 import { FaReact, FaDocker } from "react-icons/fa";
 import { SiDotnet } from "react-icons/si";
 import MyPictureBig from "./assets/my-picture-1.png";
 import MyAvatar from "./assets/my-picture-2.png";
 function Home() {
   return (
-    <div className="snap-y snap-mandatory h-screen overflow-scroll ">
+    <div className="snap-y snap-proximity h-screen overflow-scroll ">
       <div className="snap-start grid grid-cols-2 h-screen">
         <div className="grid content-center ">
           <div className="ml-20">
@@ -70,7 +74,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-amber-300 h-96 w-screen -skew-y-3 mt-20 mb-20">
+        <div className="bg-amber-300 h-96 w-screen -skew-y-3 mt-20">
           <div className="flex items-center justify-center skew-y-3 h-full">
             <div className="border-4 bg-white rounded-full w-60 h-60 overflow-hidden">
               <img src={MyAvatar} className="object-center" />
@@ -87,7 +91,7 @@ function Home() {
                 with flying colors (9.8 in 10 total). In my short time there, I
                 have already contributed to building a system that helps
                 business analysts to send, distributing documents, procedures to
-                employees at the shop
+                shop's employees
               </p>
               <p>
                 I also love doing open source development, one of my them is a
@@ -98,7 +102,17 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-amber-300 h-96 skew-y-3"></div>
+        <div className="shadow-2xl shadow-sky-900 bg-amber-300 h-screen m-5 w-9/12 -skew-y-3">
+          <div className="inline-flex font-sans text-4xl font-bold pt-5 text-sky-900 w-full justify-center">
+            Personal projects
+            <AiOutlinePushpin className="text-5xl ml-3" />
+          </div>
+          <div></div>
+          <div className="relative">
+            <div className="absolute w-40 h-40 bg-red-400"></div>
+            <div className="m-2 z-10 absolute w-40 h-40 bg-blue-400"></div>
+          </div>
+        </div>
       </div>
 
       {/* <div className="relative bg-amber-300 h-screen rotate-6 scale-125 w-screen overflow-hidden"></div> */}
