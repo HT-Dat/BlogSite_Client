@@ -74,19 +74,19 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-amber-300 h-96 w-screen -skew-y-3 mt-20">
+        <div className="bg-amber-300 h-96 -skew-y-3 mt-20">
           <div className="flex items-center justify-center skew-y-3 h-full">
             <div className="border-4 bg-white rounded-full w-60 h-60 overflow-hidden">
               <img src={MyAvatar} className="object-center" />
             </div>
-            <div className="w-7/12 pl-20 text-lg">
+            <div className="w-7/12 pl-20 text-lg text-justify">
               <p className="pb-5">
                 Hi, I'm Hồ Tiến Đạt, an undergraduate developer student from
                 Vietnam. I have been working on web development for 3 years now,
                 while still studying at university. Had my own project, coded
                 mostly in Javascript and C#.
               </p>
-              <p>
+              <p className="pb-5">
                 Having finished the internship program at FPT Retail company
                 with flying colors (9.8 in 10 total). In my short time there, I
                 have already contributed to building a system that helps
@@ -102,20 +102,34 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="shadow-2xl shadow-sky-900 bg-amber-300 h-screen m-5 w-9/12 -skew-y-3">
-          <div className="inline-flex font-sans text-4xl font-bold pt-5 text-sky-900 w-full justify-center">
-            Personal projects
-            <AiOutlinePushpin className="text-5xl ml-3" />
+        <div className="inline-flex font-sans text-4xl font-bold pt-5 text-sky-900 justify-center -skew-y-3">
+          Personal projects
+          <AiOutlinePushpin className="text-5xl ml-3" />
+        </div>
+        <div className="bg-amber-300 m-5 w-full -skew-y-3 grid grid-rows-2 place-items-center">
+          <div className="w-[900px] h-[320px] m-10">
+            <div className="absolute w-[500px] h-80 bg-gray-100 rounded-lg">
+              <div className="w-5/6 p-10">
+                <p className="text-justify">
+                  Made by Javascript, Coursera Get Shareable Link is a small
+                  extension for Coursera learners to get links to your
+                  submission. This help speed up the grading process since you
+                  can invite a mentor or other people to grade your submission.
+                </p>
+                <p className="">
+                  Currently, the extension is getting 20k+ users and keeps
+                  growing
+                </p>
+              </div>
+            </div>
+            <div className="mt-8 mr-9 mb-9 ml-[450px] absolute aspect-video h-64 bg-sky-900 rounded-lg"></div>
           </div>
-          <div></div>
-          <div className="relative">
-            <div className="absolute w-40 h-40 bg-red-400"></div>
-            <div className="m-2 z-10 absolute w-40 h-40 bg-blue-400"></div>
+          <div className="w-[900px] h-[320px] m-10">
+            <div className="absolute w-[500px] h-80 bg-white rounded-lg"></div>
+            <div className="mt-8 mr-9 mb-9 ml-[450px] absolute aspect-video h-64 bg-sky-900 rounded-lg"></div>
           </div>
         </div>
       </div>
-
-      {/* <div className="relative bg-amber-300 h-screen rotate-6 scale-125 w-screen overflow-hidden"></div> */}
     </div>
   );
 }
