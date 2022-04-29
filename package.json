@@ -1,5 +1,6 @@
 {
   "name": "blogsite_client",
+  "homepage": "https://hotiendat.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
