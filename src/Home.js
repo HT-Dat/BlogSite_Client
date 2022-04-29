@@ -8,17 +8,19 @@ import { FaReact, FaDocker } from "react-icons/fa";
 import { SiDotnet } from "react-icons/si";
 import MyPictureBig from "./assets/my-picture-1.png";
 import MyAvatar from "./assets/my-picture-2.png";
+import ExtensionImg from "./assets/coursera-extension.png";
 function Home() {
   return (
-    <div className="snap-y snap-proximity h-screen overflow-scroll ">
+    <div className="bg-slate-100">
       <div className="snap-start grid grid-cols-2 h-screen">
         <div className="grid content-center ">
           <div className="ml-20">
             <div className="text-amber-400 font-bold text-2xl">
               WEB DEVELOPER
             </div>
-            <div className="font-extrabold font-serif text-8xl mt-10 mb-10">
-              I'm Ho Tien Dat
+            <div className="font-serif text-3xl pt-10">Hi, I'm</div>
+            <div className="font-extrabold font-serif text-8xl mb-10">
+              Ho Tien Dat
             </div>
             <div className="flex">
               <div className="cursor-pointer shadow-lg flex content-center bg-amber-300 p-5 font-bold">
@@ -36,8 +38,8 @@ function Home() {
           <img src={MyPictureBig} className="object-cover h-full min-w-max" />
         </div>
       </div>
-      <div className="snap-start flex flex-col justify-center items-center">
-        <div className="font-sans text-4xl font-bold pt-14 text-sky-900">
+      <div className="h-fit snap-start flex flex-col justify-center items-center">
+        <div className="font-sans text-4xl font-bold pt-32 text-sky-900">
           Things I focus on...
         </div>
         <div className="grid grid-cols-3 gap-32 w-9/12 ">
@@ -95,9 +97,9 @@ function Home() {
               </p>
               <p>
                 I also love doing open source development, one of my them is a
-                published extension on chrome web store made by Javascript with
-                over 20k+ users. It gives me a wonderful feeling of achievement
-                and joy which I cannot explain in words.
+                published extension on chrome web store made with Javascript
+                with over 20k+ users. It gives me a wonderful feeling of
+                achievement and joy which I cannot explain in words.
               </p>
             </div>
           </div>
@@ -107,14 +109,15 @@ function Home() {
           <AiOutlinePushpin className="text-5xl ml-3" />
         </div>
         <div className="bg-amber-300 m-5 w-full -skew-y-3 grid grid-rows-2 place-items-center">
-          <div className="w-[900px] h-[320px] m-10">
-            <div className="absolute w-[500px] h-80 bg-gray-100 rounded-lg">
-              <div className="w-5/6 p-10">
+          <div className="w-[900px] h-[320px] m-20 skew-y-3">
+            <div className="absolute w-[500px] h-80 bg-white rounded-lg shadow-3xl">
+              <div className="w-10/12 pt-10 pl-10 text-lg">
                 <p className="text-justify">
-                  Made by Javascript, Coursera Get Shareable Link is a small
-                  extension for Coursera learners to get links to your
-                  submission. This help speed up the grading process since you
-                  can invite a mentor or other people to grade your submission.
+                  Made with Javascript, Coursera Get Shareable Link is a simple
+                  yet useful extension for Coursera learners to get links to
+                  your submission. This help speed up the grading process since
+                  you can invite a mentor or other people to grade your
+                  submission.
                 </p>
                 <p className="">
                   Currently, the extension is getting 20k+ users and keeps
@@ -122,7 +125,12 @@ function Home() {
                 </p>
               </div>
             </div>
-            <div className="mt-8 mr-9 mb-9 ml-[450px] absolute aspect-video h-64 bg-sky-900 rounded-lg"></div>
+            <div className="border-2 border-sky-900 overflow-hidden shadow-3xl mt-8 mr-9 mb-9 ml-[450px] absolute aspect-video h-64 bg-sky-900 rounded-lg">
+              <img
+                src={ExtensionImg}
+                className="object-contain h-full w-full rounded-lg"
+              />
+            </div>
           </div>
           <div className="w-[900px] h-[320px] m-10">
             <div className="absolute w-[500px] h-80 bg-white rounded-lg"></div>
