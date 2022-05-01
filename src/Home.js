@@ -108,7 +108,7 @@ function Home() {
           Personal projects
           <AiOutlinePushpin className="text-5xl ml-3" />
         </div>
-        <div className="bg-amber-300 m-5 w-full -skew-y-3 grid grid-rows-2 place-items-center">
+        <div className="bg-amber-300 m-5 w-full -skew-y-3 grid grid-rows-1 place-items-center">
           <div className="w-[900px] h-[320px] m-20 skew-y-3">
             <div className="absolute w-[500px] h-80 bg-white rounded-lg shadow-3xl">
               <div className="w-10/12 pt-10 pl-10 text-lg">
@@ -131,10 +131,6 @@ function Home() {
                 className="object-contain h-full w-full rounded-lg"
               />
             </div>
-          </div>
-          <div className="w-[900px] h-[320px] m-10">
-            <div className="absolute w-[500px] h-80 bg-white rounded-lg"></div>
-            <div className="mt-8 mr-9 mb-9 ml-[450px] absolute aspect-video h-64 bg-sky-900 rounded-lg"></div>
           </div>
         </div>
       </div>
