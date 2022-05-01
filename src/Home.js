@@ -25,10 +25,14 @@ function Home() {
               Ho Tien Dat
             </div>
             <div className="flex">
-              <div className="cursor-pointer shadow-lg flex content-center bg-amber-300 p-5 font-bold">
+              <a
+                target="_blank"
+                href="https://hotiendat.com/public_assets/CV_SE151249_HO%20TIEN%20DAT.pdf"
+                className="cursor-pointer shadow-lg flex content-center bg-amber-300 p-5 font-bold"
+              >
                 <div>DOWNLOAD CV</div>
                 <AiOutlineDownload className="h-full ml-1" />
-              </div>
+              </a>
               <div className="cursor-pointer bg-white shadow-lg flex items-center ml-10 p-3">
                 <AiOutlineArrowRight />
                 <div className="ml-1">MORE ABOUT ME</div>
