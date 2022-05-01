@@ -14,14 +14,14 @@ function Home() {
   return (
     <>
       <Navbar />
-      <div className="snap-start grid grid-cols-2 h-screen">
-        <div className="grid content-center ">
+      <div className="snap-start grid grid-cols-2 h-screen ">
+        <div className="grid content-center font-montserrat">
           <div className="ml-20">
-            <div className="text-amber-400 font-bold text-2xl">
+            <div className="text-amber-400 font-extrabold text-2xl">
               WEB DEVELOPER
             </div>
-            <div className="font-serif text-3xl pt-10">Hi, I'm</div>
-            <div className="font-extrabold font-serif text-8xl mb-10">
+            <div className="text-3xl pt-10">Hello, I'm</div>
+            <div className="font-serif font-extrabold text-8xl mb-10">
               Ho Tien Dat
             </div>
             <div className="flex">
@@ -41,7 +41,7 @@ function Home() {
         </div>
       </div>
       <div className="h-fit snap-start flex flex-col justify-center items-center">
-        <div className="font-sans text-4xl font-bold pt-32 text-sky-900">
+        <div className="font-montserrat text-4xl font-bold pt-32 text-sky-900">
           Things I focus on...
         </div>
         <div className="grid grid-cols-3 gap-32 w-9/12 ">
@@ -49,8 +49,10 @@ function Home() {
             <div className="bg-gradient-to-br from-yellow-200 via-yellow-400 to-yellow-400 rounded-full flex items-center justify-center w-32 h-32">
               <FaReact className="text-6xl text-sky-900" />
             </div>
-            <div className="text-3xl p-7 text-sky-900">ReactJs</div>
-            <div className="text-center text-lg ml-5 mr-5 mb-5">
+            <div className="text-3xl p-7 text-sky-900 font-montserrat font-semibold">
+              ReactJs
+            </div>
+            <div className="text-center text-lg ml-5 mr-5 mb-5 font-karla">
               I liked Reactjs because of its component-based concept so I use it
               the most to build frontend for my projects.
             </div>
@@ -59,9 +61,11 @@ function Home() {
             <div className="bg-gradient-to-br from-yellow-200 via-yellow-400 to-yellow-400 rounded-full flex items-center justify-center w-32 h-32">
               <SiDotnet className="text-6xl text-sky-900" />
             </div>
-            <div className="text-3xl p-7 text-sky-900">DotNet</div>
+            <div className="text-3xl p-7 text-sky-900 font-montserrat font-semibold">
+              DotNet
+            </div>
 
-            <div className="text-center text-lg ml-5 mr-5 mb-5">
+            <div className="text-center text-lg ml-5 mr-5 mb-5 font-karla">
               I'm more backend focus and love to work with DotNet as well as
               other backend tasks.
             </div>
@@ -70,8 +74,10 @@ function Home() {
             <div className="bg-gradient-to-br from-yellow-200 via-yellow-400 to-yellow-400 rounded-full flex items-center justify-center w-32 h-32">
               <FaDocker className="text-6xl text-sky-900" />
             </div>
-            <div className="text-3xl p-7 text-sky-900">Docker</div>
-            <div className="text-center text-lg ml-5 mr-5 mb-5">
+            <div className="text-3xl p-7 text-sky-900 font-montserrat font-semibold">
+              Docker
+            </div>
+            <div className="text-center text-lg ml-5 mr-5 mb-5 font-karla">
               Helping me pack, ship, and run my application anywhere, I fell in
               love with Docker immediately and Dockerizing everything if
               possible.
@@ -83,7 +89,7 @@ function Home() {
             <div className="border-4 bg-white rounded-full w-60 h-60 overflow-hidden">
               <img src={MyAvatar} className="object-center" />
             </div>
-            <div className="w-7/12 pl-20 text-lg text-justify">
+            <div className="w-7/12 pl-20 text-lg text-justify font-karla">
               <p className="pb-5">
                 Hi, I'm Hồ Tiến Đạt, an undergraduate developer student from
                 Vietnam. I have been working on web development for 3 years now,
@@ -106,14 +112,14 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="inline-flex font-sans text-4xl font-bold pt-5 text-sky-900 justify-center -skew-y-3">
+        <div className="inline-flex font-montserrat text-4xl font-bold pt-5 text-sky-900 justify-center -skew-y-3">
           Personal projects
           <AiOutlinePushpin className="text-5xl ml-3" />
         </div>
         <div className="bg-amber-300 m-5 w-full -skew-y-3 grid grid-rows-1 place-items-center">
           <div className="w-[900px] h-[320px] m-20 skew-y-3">
             <div className="absolute w-[500px] h-80 bg-white rounded-lg shadow-3xl">
-              <div className="w-10/12 pt-10 pl-10 text-lg">
+              <div className="w-10/12 pt-10 pl-10 text-lg font-karla">
                 <p className="text-justify">
                   Made with Javascript, Coursera Get Shareable Link is a simple
                   yet useful extension for Coursera learners to get links to
