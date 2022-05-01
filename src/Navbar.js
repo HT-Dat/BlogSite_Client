@@ -6,7 +6,7 @@ function Navbar() {
       <div className="flex flex-wrap justify-between items-center w-full">
         <a href="https://flowbite.com" className="flex items-center">
           <HiAcademicCap className="text-4xl" />
-          <span className="self-center text-3xl font-mono font-bold whitespace-nowrap pl-2">
+          <span className="self-center text-3xl font-montserrat font-bold whitespace-nowrap pl-2">
             HT-Dat
           </span>
         </a>
@@ -44,7 +44,7 @@ function Navbar() {
           </svg>
         </button>
         <div className="hidden md:block" id="mobile-menu">
-          <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-xl md:font-mono">
+          <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-xl md:font-montserrat">
             <li>
               <a
                 href="#"
