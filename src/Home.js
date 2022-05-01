@@ -9,9 +9,11 @@ import { SiDotnet } from "react-icons/si";
 import MyPictureBig from "./assets/my-picture-1.png";
 import MyAvatar from "./assets/my-picture-2.png";
 import ExtensionImg from "./assets/coursera-extension.png";
+import Navbar from "./Navbar";
 function Home() {
   return (
-    <div className="bg-slate-100">
+    <>
+      <Navbar />
       <div className="snap-start grid grid-cols-2 h-screen">
         <div className="grid content-center ">
           <div className="ml-20">
@@ -76,7 +78,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-amber-300 h-96 -skew-y-3 mt-20">
+        <div className="bg-amber-300 h-96 -skew-y-3 mt-20 w-full">
           <div className="flex items-center justify-center skew-y-3 h-full">
             <div className="border-4 bg-white rounded-full w-60 h-60 overflow-hidden">
               <img src={MyAvatar} className="object-center" />
@@ -134,7 +136,7 @@ function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 export default Home;
