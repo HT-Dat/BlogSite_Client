@@ -7,6 +7,7 @@ import {
   AiOutlinePushpin,
   AiFillChrome,
 } from "react-icons/ai";
+import { BsFacebook } from "react-icons/bs";
 import { FaReact, FaDocker } from "react-icons/fa";
 import { SiDotnet } from "react-icons/si";
 import MyPictureBig from "./assets/my-picture-1.png";
@@ -25,6 +26,21 @@ function Home() {
             <div className="text-amber-400 font-extrabold text-2xl">
               WEB DEVELOPER
             </div>
+            <div class="flex flex-wrap gap-2">
+              <a
+                href="https://www.facebook.com/Bolun06/"
+                class="p-2 text-3xl text-amber-400 hover:text-black"
+              >
+                <BsFacebook />
+              </a>
+
+              <a
+                href="https://github.com/HT-Dat"
+                class="p-1 text-4xl text-amber-400 hover:text-black"
+              >
+                <AiFillGithub />
+              </a>
+            </div>
             <div className="text-3xl pt-10">Hello, I'm</div>
             <div className="font-serif font-extrabold text-8xl mb-10">
               Ho Tien Dat
@@ -33,7 +49,7 @@ function Home() {
               <a
                 target="_blank"
                 href="https://hotiendat.com/public_assets/CV_SE151249_HO%20TIEN%20DAT.pdf"
-                className="cursor-pointer shadow-lg flex content-center bg-amber-300 p-5 font-bold"
+                className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-amber-200 duration-300 shadow-lg flex content-center bg-amber-300 p-5 font-bold"
               >
                 <div>DOWNLOAD CV</div>
                 <AiOutlineDownload className="h-full ml-1" />
@@ -54,7 +70,7 @@ function Home() {
           Things I focus on...
         </div>
         <div className="grid grid-cols-3 gap-32 w-9/12 ">
-          <div className="rounded-xl m-5 shadow-md flex flex-col items-center">
+          <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-125 duration-300 rounded-xl m-5 shadow-md flex flex-col items-center">
             <div className="bg-gradient-to-br from-yellow-200 via-yellow-400 to-yellow-400 rounded-full flex items-center justify-center w-32 h-32">
               <FaReact className="text-6xl text-sky-900" />
             </div>
@@ -66,7 +82,7 @@ function Home() {
               the most to build frontend for my projects.
             </div>
           </div>
-          <div className="rounded-xl m-5 shadow-md flex flex-col items-center">
+          <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-125 duration-300 rounded-xl m-5 shadow-md flex flex-col items-center">
             <div className="bg-gradient-to-br from-yellow-200 via-yellow-400 to-yellow-400 rounded-full flex items-center justify-center w-32 h-32">
               <SiDotnet className="text-6xl text-sky-900" />
             </div>
@@ -79,7 +95,7 @@ function Home() {
               other backend tasks.
             </div>
           </div>
-          <div className="rounded-xl m-5 shadow-md flex flex-col items-center">
+          <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-125 duration-300 rounded-xl m-5 shadow-md flex flex-col items-center">
             <div className="bg-gradient-to-br from-yellow-200 via-yellow-400 to-yellow-400 rounded-full flex items-center justify-center w-32 h-32">
               <FaDocker className="text-6xl text-sky-900" />
             </div>
@@ -189,13 +205,13 @@ function Home() {
               <div class="flex items-center mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
                 <a
                   href="https://chrome.google.com/webstore/detail/coursera-get-shareable-li/fbplppipepefackdlimggnjogpdamlhn"
-                  class="bg-sky-900 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg flex w-fit"
+                  class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-sky-700 duration-300 bg-sky-900 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg flex w-fit"
                 >
                   Web store <AiFillChrome className="text-2xl ml-2" />
                 </a>
                 <a
                   href="https://github.com/HT-Dat/chrome-extension-coursera-getter"
-                  className="bg-black text-white rounded-full py-2 px-2 ml-2"
+                  className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-slate-800 duration-300 bg-black text-white rounded-full py-2 px-2 ml-2"
                 >
                   <AiFillGithub className="text-2xl" />
                 </a>
