@@ -1,14 +1,19 @@
 import React from "react";
 import {
+  AiFillGithub,
+  AiOutlineUser,
   AiOutlineDownload,
   AiOutlineArrowRight,
   AiOutlinePushpin,
+  AiFillChrome,
 } from "react-icons/ai";
 import { FaReact, FaDocker } from "react-icons/fa";
 import { SiDotnet } from "react-icons/si";
 import MyPictureBig from "./assets/my-picture-1.png";
 import MyAvatar from "./assets/my-picture-2.png";
-import ExtensionImg from "./assets/coursera-extension.png";
+import ExtensionImg1 from "./assets/coursera-extension-1.png";
+import ExtensionImg2 from "./assets/coursera-extension-2.png";
+import ExtensionImg3 from "./assets/coursera-extension-3.png";
 import Navbar from "./Navbar";
 function Home() {
   return (
@@ -121,7 +126,89 @@ function Home() {
           <AiOutlinePushpin className="text-5xl ml-3" />
         </div>
         <div className="bg-amber-300 m-5 w-full -skew-y-3 grid grid-rows-1 place-items-center">
-          <div className="w-[900px] h-[320px] m-20 skew-y-3">
+          <main class="py-6 px-4 sm:p-6 md:py-10 md:px-8 skew-y-3">
+            <div class="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
+              <div class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
+                <h1 class="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white">
+                  Coursera Get Shareable Link
+                </h1>
+                <p class="text-sm leading-4 font-medium text-white sm:text-slate-500 dark:sm:text-slate-400">
+                  Chrome web store extension
+                </p>
+              </div>
+              <div class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
+                <img
+                  src={ExtensionImg1}
+                  alt=""
+                  class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full"
+                />
+                <img
+                  src={ExtensionImg2}
+                  alt=""
+                  class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32"
+                />
+                <img
+                  src={ExtensionImg3}
+                  alt=""
+                  class="hidden w-full h-52 object-contain rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32"
+                />
+              </div>
+              <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
+                <dt class="sr-only">Reviews</dt>
+                <dd class="text-indigo-600 flex items-center dark:text-indigo-400">
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="none"
+                    aria-hidden="true"
+                    class="mr-1 stroke-current dark:stroke-indigo-500"
+                  >
+                    <path
+                      d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <span>4.8</span>
+                </dd>
+                <dd class="flex items-center">
+                  <svg
+                    width="2"
+                    height="2"
+                    aria-hidden="true"
+                    fill="currentColor"
+                    class="mx-3 text-slate-300"
+                  >
+                    <circle cx="1" cy="1" r="1"></circle>
+                  </svg>
+                  <AiOutlineUser className="text-xl text-indigo-600 text-bold" />
+                  20,000+ users
+                </dd>
+              </dl>
+              <div class="flex items-center mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
+                <a
+                  href="https://chrome.google.com/webstore/detail/coursera-get-shareable-li/fbplppipepefackdlimggnjogpdamlhn"
+                  class="bg-sky-900 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg flex w-fit"
+                >
+                  Web store <AiFillChrome className="text-2xl ml-2" />
+                </a>
+                <a
+                  href="https://github.com/HT-Dat/chrome-extension-coursera-getter"
+                  className="bg-black text-white rounded-full py-2 px-2 ml-2"
+                >
+                  <AiFillGithub className="text-2xl" />
+                </a>
+              </div>
+              <p class="font-karla mt-4 leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-400">
+                Made with Javascript, Coursera Get Shareable Link is a simple
+                yet useful extension for Coursera learners to get links to your
+                submission. This help speed up the grading process since you can
+                invite a mentor or other people to grade your submission.
+              </p>
+            </div>
+          </main>
+          {/* <div className="w-[900px] h-[320px] m-20 skew-y-3">
             <div className="absolute w-[500px] h-80 bg-white rounded-lg shadow-3xl">
               <div className="w-10/12 pt-10 pl-10 text-lg font-karla">
                 <p className="text-justify">
@@ -135,6 +222,17 @@ function Home() {
                   Currently, the extension is getting 20k+ users and keeps
                   growing
                 </p>
+                <div className="flex w-full">
+                  <a
+                    href="https://chrome.google.com/webstore/detail/coursera-get-shareable-li/fbplppipepefackdlimggnjogpdamlhn"
+                    target="_blank"
+                    className="flex items-center border-yellow-400 border-2 rounded-full h-14 p-5 m-5"
+                  >
+                    Chrome web store
+                    <AiFillChrome className="text-2xl" />
+                  </a>
+                  <div className="border-yellow-400 border-2 rounded-full h-10"></div>
+                </div>
               </div>
             </div>
             <div className="border-2 border-sky-900 overflow-hidden shadow-3xl mt-8 mr-9 mb-9 ml-[450px] absolute aspect-video h-64 bg-sky-900 rounded-lg">
@@ -143,7 +241,7 @@ function Home() {
                 className="object-contain h-full w-full rounded-lg"
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
