@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <nav className="shadow-2xl z-10 sticky top-0 bg-black px-2 sm:px-4 py-4 text-white">
       <div className="flex flex-wrap justify-between items-center w-full">
-        <a href="https://flowbite.com" className="flex items-center">
+        <a href="/" className="flex items-center">
           <HiAcademicCap className="text-4xl" />
           <span className="self-center text-3xl font-montserrat font-bold whitespace-nowrap pl-2">
             HT-Dat
