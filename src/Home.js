@@ -205,6 +205,10 @@ function Home() {
                 yet useful extension for Coursera learners to get links to your
                 submission. This help speed up the grading process since you can
                 invite a mentor or other people to grade your submission.
+                <p className="pt-2">
+                  Currently, the extension is getting 20k+ users and keeps
+                  growing
+                </p>
               </p>
             </div>
           </main>
