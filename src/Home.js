@@ -26,17 +26,17 @@ function Home() {
             <div className="text-amber-400 font-extrabold text-2xl">
               WEB DEVELOPER
             </div>
-            <div class="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2">
               <a
                 href="https://www.facebook.com/Bolun06/"
-                class="p-2 text-3xl text-amber-400 hover:text-black"
+                className="p-2 text-3xl text-amber-400 hover:text-black"
               >
                 <BsFacebook />
               </a>
 
               <a
                 href="https://github.com/HT-Dat"
-                class="p-1 text-4xl text-amber-400 hover:text-black"
+                className="p-1 text-4xl text-amber-400 hover:text-black"
               >
                 <AiFillGithub />
               </a>
@@ -142,39 +142,39 @@ function Home() {
           <AiOutlinePushpin className="text-5xl ml-3" />
         </div>
         <div className="bg-amber-300 m-5 w-full -skew-y-3 grid grid-rows-1 place-items-center">
-          <main class="w-full md:w-fit m-20 py-6 px-4 sm:p-6 md:py-10 md:px-8 skew-y-3 bg-amber-200">
-            <div class="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
-              <div class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
-                <h1 class="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl ">
+          <main className="w-full md:w-fit m-20 py-6 px-4 sm:p-6 md:py-10 md:px-8 skew-y-3 bg-amber-200">
+            <div className="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
+              <div className="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
+                <h1 className="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl ">
                   Coursera Get Shareable Link
                 </h1>
               </div>
-              <div class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
+              <div className="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
                 <img
                   src={ExtensionImg1}
                   alt=""
-                  class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full"
+                  className="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full"
                 />
                 <img
                   src={ExtensionImg2}
                   alt=""
-                  class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32"
+                  className="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32"
                 />
                 <img
                   src={ExtensionImg3}
                   alt=""
-                  class="hidden w-full h-52 object-contain rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32"
+                  className="hidden w-full h-52 object-contain rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32"
                 />
               </div>
-              <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
-                <dt class="sr-only">Reviews</dt>
-                <dd class="text-indigo-600 flex items-center ">
+              <dl className="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
+                <dt className="sr-only">Reviews</dt>
+                <dd className="text-indigo-600 flex items-center ">
                   <svg
                     width="24"
                     height="24"
                     fill="none"
                     aria-hidden="true"
-                    class="mr-1 stroke-current"
+                    className="mr-1 stroke-current"
                   >
                     <path
                       d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"
@@ -185,13 +185,13 @@ function Home() {
                   </svg>
                   <span>4.8</span>
                 </dd>
-                <dd class="flex items-center">
+                <dd className="flex items-center">
                   <svg
                     width="2"
                     height="2"
                     aria-hidden="true"
                     fill="currentColor"
-                    class="mx-3 text-slate-300"
+                    className="mx-3 text-slate-300"
                   >
                     <circle cx="1" cy="1" r="1"></circle>
                   </svg>
@@ -199,10 +199,10 @@ function Home() {
                   20,000+ users
                 </dd>
               </dl>
-              <div class="flex items-center mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
+              <div className="flex items-center mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
                 <a
                   href="https://chrome.google.com/webstore/detail/coursera-get-shareable-li/fbplppipepefackdlimggnjogpdamlhn"
-                  class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-sky-700 duration-300 bg-sky-900 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg flex w-fit"
+                  className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-sky-700 duration-300 bg-sky-900 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg flex w-fit"
                 >
                   Web store <AiFillChrome className="text-2xl ml-2" />
                 </a>
@@ -213,7 +213,7 @@ function Home() {
                   <AiFillGithub className="text-2xl" />
                 </a>
               </div>
-              <p class="font-karla mt-4 leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 ">
+              <p className="font-karla mt-4 leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 ">
                 Made with Javascript, Coursera Get Shareable Link is a simple
                 yet useful extension for Coursera learners to get links to your
                 submission. This help speed up the grading process since you can
