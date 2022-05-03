@@ -20,8 +20,8 @@ function Home() {
   return (
     <>
       <Navbar />
-      <div className="snap-start grid grid-cols-2 h-screen ">
-        <div className="grid content-center font-montserrat">
+      <div className="snap-start grid grid-cols-1 md:grid-cols-2">
+        <div className="grid content-center font-montserrat h-screen">
           <div className="ml-20">
             <div className="text-amber-400 font-extrabold text-2xl">
               WEB DEVELOPER
@@ -45,7 +45,7 @@ function Home() {
             <div className="font-serif font-extrabold text-8xl mb-10">
               Ho Tien Dat
             </div>
-            <div className="flex">
+            <div className="flex gap-5 flex-col sm:flex-row w-10/12">
               <a
                 target="_blank"
                 href="https://hotiendat.com/public_assets/CV_SE151249_HO%20TIEN%20DAT.pdf"
@@ -54,14 +54,14 @@ function Home() {
                 <div>DOWNLOAD CV</div>
                 <AiOutlineDownload className="h-full ml-1" />
               </a>
-              <div className="cursor-pointer bg-white shadow-lg flex items-center ml-10 p-3">
+              <div className="cursor-pointer bg-white shadow-lg flex items-center p-3">
                 <AiOutlineArrowRight />
                 <div className="ml-1">MORE ABOUT ME</div>
               </div>
             </div>
           </div>
         </div>
-        <div className="bg-amber-300 max-h-screen overflow-hidden">
+        <div className=" bg-amber-300 max-h-screen overflow-hidden">
           <img src={MyPictureBig} className="object-cover h-full min-w-max" />
         </div>
       </div>
@@ -137,20 +137,17 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="inline-flex font-montserrat text-4xl font-bold pt-5 text-sky-900 justify-center -skew-y-3">
-          Personal projects
+        <div className="flex font-montserrat text-4xl font-bold pt-5 text-sky-900 justify-center items-center -skew-y-3">
+          <div>Personal project</div>
           <AiOutlinePushpin className="text-5xl ml-3" />
         </div>
         <div className="bg-amber-300 m-5 w-full -skew-y-3 grid grid-rows-1 place-items-center">
-          <main class="py-6 px-4 sm:p-6 md:py-10 md:px-8 skew-y-3">
+          <main class="m-20  py-6 px-4 sm:p-6 md:py-10 md:px-8 skew-y-3 bg-amber-200">
             <div class="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
               <div class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
                 <h1 class="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white">
                   Coursera Get Shareable Link
                 </h1>
-                <p class="text-sm leading-4 font-medium text-white sm:text-slate-500 dark:sm:text-slate-400">
-                  Chrome web store extension
-                </p>
               </div>
               <div class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
                 <img
