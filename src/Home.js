@@ -69,7 +69,7 @@ function Home() {
         <div className="font-montserrat text-4xl font-bold pt-32 text-sky-900">
           Things I focus on...
         </div>
-        <div className="grid grid-cols-3 gap-32 w-9/12 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-2 xl:gap-32 w-9/12 ">
           <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-125 duration-300 rounded-xl m-5 shadow-md flex flex-col items-center">
             <div className="bg-gradient-to-br from-yellow-200 via-yellow-400 to-yellow-400 rounded-full flex items-center justify-center w-32 h-32">
               <FaReact className="text-6xl text-sky-900" />
@@ -110,11 +110,11 @@ function Home() {
           </div>
         </div>
         <div className="bg-amber-300 -skew-y-3 mt-20 w-full">
-          <div className="flex items-center justify-center skew-y-3 h-full p-10">
+          <div className="flex items-center justify-center flex-col md:flex-row skew-y-3 h-full p-10 gap-20">
             <div className="border-4 bg-white rounded-full w-60 h-60 overflow-hidden">
               <img src={MyAvatar} className="object-center" />
             </div>
-            <div className="w-7/12 pl-20 text-lg text-justify font-karla">
+            <div className="md:w-7/12 w-full text-lg text-justify font-karla">
               <p className="pb-5">
                 Hi, I'm Hồ Tiến Đạt, an undergraduate developer student from
                 Vietnam. I have been working on web development for 3 years now,
