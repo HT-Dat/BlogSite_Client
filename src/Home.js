@@ -109,8 +109,8 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-amber-300 h-96 -skew-y-3 mt-20 w-full">
-          <div className="flex items-center justify-center skew-y-3 h-full">
+        <div className="bg-amber-300 -skew-y-3 mt-20 w-full">
+          <div className="flex items-center justify-center skew-y-3 h-full p-10">
             <div className="border-4 bg-white rounded-full w-60 h-60 overflow-hidden">
               <img src={MyAvatar} className="object-center" />
             </div>
