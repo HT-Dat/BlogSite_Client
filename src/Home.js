@@ -145,7 +145,7 @@ function Home() {
           <main class="w-full md:w-fit m-20 py-6 px-4 sm:p-6 md:py-10 md:px-8 skew-y-3 bg-amber-200">
             <div class="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
               <div class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
-                <h1 class="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white">
+                <h1 class="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl ">
                   Coursera Get Shareable Link
                 </h1>
               </div>
@@ -168,13 +168,13 @@ function Home() {
               </div>
               <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
                 <dt class="sr-only">Reviews</dt>
-                <dd class="text-indigo-600 flex items-center dark:text-indigo-400">
+                <dd class="text-indigo-600 flex items-center ">
                   <svg
                     width="24"
                     height="24"
                     fill="none"
                     aria-hidden="true"
-                    class="mr-1 stroke-current dark:stroke-indigo-500"
+                    class="mr-1 stroke-current"
                   >
                     <path
                       d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"
@@ -213,7 +213,7 @@ function Home() {
                   <AiFillGithub className="text-2xl" />
                 </a>
               </div>
-              <p class="font-karla mt-4 leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-400">
+              <p class="font-karla mt-4 leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 ">
                 Made with Javascript, Coursera Get Shareable Link is a simple
                 yet useful extension for Coursera learners to get links to your
                 submission. This help speed up the grading process since you can
