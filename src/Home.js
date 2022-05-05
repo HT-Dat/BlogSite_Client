@@ -56,7 +56,9 @@ function Home() {
               </a>
               <div className="cursor-pointer bg-white shadow-lg flex items-center p-3">
                 <AiOutlineArrowRight />
-                <div className="ml-1">MORE ABOUT ME</div>
+                <a href="#focused-things" className="ml-1">
+                  MORE ABOUT ME
+                </a>
               </div>
             </div>
           </div>
