@@ -20,7 +20,7 @@ function Home() {
   return (
     <>
       <Navbar />
-      <div className="snap-start grid grid-cols-1 md:grid-cols-2">
+      <div id="home" className="snap-start grid grid-cols-1 md:grid-cols-2">
         <div className="grid content-center font-montserrat h-screen">
           <div className="ml-20">
             <div className="text-amber-400 font-extrabold text-2xl">
@@ -66,7 +66,10 @@ function Home() {
         </div>
       </div>
       <div className="h-fit snap-start flex flex-col justify-center items-center">
-        <div className="font-montserrat text-4xl font-bold pt-32 text-sky-900">
+        <div
+          id="focused-things"
+          className="font-montserrat text-4xl font-bold pt-32 text-sky-900"
+        >
           Things I focus on...
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-2 xl:gap-32 w-9/12 ">
@@ -109,7 +112,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-amber-300 -skew-y-3 mt-20 w-full">
+        <div id="about-me" className="bg-amber-300 -skew-y-3 mt-20 w-full">
           <div className="flex items-center justify-center flex-col md:flex-row skew-y-3 h-full p-10 gap-20">
             <div className="border-4 bg-white rounded-full w-60 h-60 overflow-hidden">
               <img src={MyAvatar} className="object-center" />
@@ -137,7 +140,10 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="flex font-montserrat text-4xl font-bold pt-5 text-sky-900 justify-center items-center -skew-y-3">
+        <div
+          id="projects"
+          className="flex font-montserrat text-4xl font-bold pt-5 text-sky-900 justify-center items-center -skew-y-3"
+        >
           <div>Personal project</div>
           <AiOutlinePushpin className="text-5xl ml-3" />
         </div>
