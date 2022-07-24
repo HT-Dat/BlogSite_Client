@@ -150,7 +150,7 @@ function Home() {
           <AiOutlinePushpin className="text-5xl ml-3" />
         </div>
         <div className="bg-amber-300 m-5 w-full -skew-y-3 grid grid-rows-1 place-items-center overflow-hidden">
-          <main className="h-full w-fit md:w-fit py-6 px-4 sm:p-6 md:py-10 md:px-40  bg-amber-400">
+          <div className="h-full w-fit py-6 px-4 bg-none sm:p-6 md:w-fit md:px-40 md:py-10 md:bg-amber-400">
             <div className="skew-y-3 max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
               <div className="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
                 <h1 className="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl ">
@@ -232,7 +232,7 @@ function Home() {
                 </p>
               </p>
             </div>
-          </main>
+          </div>
           {/* <div className="w-[900px] h-[320px] m-20 skew-y-3">
             <div className="absolute w-[500px] h-80 bg-white rounded-lg shadow-3xl">
               <div className="w-10/12 pt-10 pl-10 text-lg font-karla">
