@@ -159,20 +159,20 @@ function Home() {
               </div>
               <div className="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
                 <img
-                  src={ExtensionImg1}
+                  src={ExtensionImg2}
                   alt=""
                   className="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full"
                 />
                 <img
-                  src={ExtensionImg2}
+                  src={ExtensionImg1}
                   alt=""
-                  className="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32"
+                  className="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full"
                 />
-                <img
+                {/* <img
                   src={ExtensionImg3}
                   alt=""
                   className="hidden w-full h-52 object-contain rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32"
-                />
+                /> */}
               </div>
               <dl className="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
                 <dt className="sr-only">Reviews</dt>
@@ -191,7 +191,7 @@ function Home() {
                       stroke-linejoin="round"
                     ></path>
                   </svg>
-                  <span>4.8</span>
+                  <span>4.9</span>
                 </dd>
                 <dd className="flex items-center">
                   <svg
@@ -204,7 +204,7 @@ function Home() {
                     <circle cx="1" cy="1" r="1"></circle>
                   </svg>
                   <AiOutlineUser className="text-xl text-indigo-600 text-bold" />
-                  20,000+ users
+                  30,000+ users
                 </dd>
               </dl>
               <div className="flex items-center mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
@@ -227,7 +227,7 @@ function Home() {
                 submission. This help speed up the grading process since you can
                 invite a mentor or other people to grade your submission.
                 <p className="pt-2">
-                  Currently, the extension is getting 20k+ users and keeps
+                  Currently, the extension is getting 30.000+ users and keeps
                   growing
                 </p>
               </p>
