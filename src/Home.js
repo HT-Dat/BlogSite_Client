@@ -186,9 +186,9 @@ function Home() {
                   >
                     <path
                       d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                   </svg>
                   <span>4.9</span>
@@ -221,16 +221,19 @@ function Home() {
                   <AiFillGithub className="text-2xl" />
                 </a>
               </div>
-              <p className="font-karla mt-4 leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 ">
-                Made with Javascript, Coursera Get Shareable Link is a simple
-                yet useful extension for Coursera learners to get links to your
-                submission. This help speed up the grading process since you can
-                invite a mentor or other people to grade your submission.
+              <div className="font-karla mt-4 leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 ">
+                <p>
+                  Made with Javascript, Coursera Get Shareable Link is a simple
+                  yet useful extension for Coursera learners to get links to
+                  your submission. This help speed up the grading process since
+                  you can invite a mentor or other people to grade your
+                  submission.
+                </p>
                 <p className="pt-2">
                   Currently, the extension is getting 30.000+ users and keeps
                   growing
                 </p>
-              </p>
+              </div>
             </div>
           </div>
           {/* <div className="w-[900px] h-[320px] m-20 skew-y-3">
