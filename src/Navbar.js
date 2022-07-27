@@ -46,8 +46,9 @@ function Navbar() {
           </svg>
         </button>
         <div
-          className={"w-full md:w-fit" + (isNavExpanded ? " block" : " hidden")}
-          id="mobile-menu"
+          className={
+            "w-full md:w-fit md:block" + (isNavExpanded ? " block" : " hidden")
+          }
         >
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-xl md:font-montserrat">
             <li>
