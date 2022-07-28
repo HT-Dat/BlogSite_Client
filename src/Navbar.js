@@ -14,7 +14,10 @@ function Navbar() {
         </a>
         <button
           type="button"
-          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className={
+            "inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-gray-200" +
+            (isNavExpanded ? " bg-gray-100" : "")
+          }
           onClick={() => {
             setIsNavExpanded(!isNavExpanded);
           }}
@@ -54,7 +57,7 @@ function Navbar() {
             <li>
               <a
                 href="#home"
-                className="block py-2 pr-6 pl-4 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                className="block py-2 pr-6 pl-4 text-white border-b border-gray-100 hover:bg-amber-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
               >
                 home
               </a>
@@ -62,7 +65,7 @@ function Navbar() {
             <li>
               <a
                 href="#focused-things"
-                className="block py-2 pr-6 pl-4 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                className="block py-2 pr-6 pl-4 text-white border-b border-gray-100 hover:bg-amber-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
               >
                 focused things
               </a>
@@ -70,7 +73,7 @@ function Navbar() {
             <li>
               <a
                 href="#about-me"
-                className="block py-2 pr-6 pl-4 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                className="block py-2 pr-6 pl-4 text-white border-b border-gray-100 hover:bg-amber-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
               >
                 about me
               </a>
@@ -78,7 +81,7 @@ function Navbar() {
             <li>
               <a
                 href="#projects"
-                className="block py-2 pr-6 pl-4 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                className="block py-2 pr-6 pl-4 text-white border-b border-gray-100 hover:bg-amber-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
               >
                 projects
               </a>
@@ -86,7 +89,7 @@ function Navbar() {
             <li>
               <a
                 href="#"
-                className="block py-2 pr-6 pl-4 text-white hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                className="block py-2 pr-6 pl-4 text-white hover:bg-amber-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
               >
                 blog
               </a>
