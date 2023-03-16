@@ -15,7 +15,7 @@ import MyAvatar from "./assets/my-picture-2.png";
 import ExtensionImg1 from "./assets/coursera-extension-1.png";
 import ExtensionImg2 from "./assets/coursera-extension-2.png";
 import ExtensionImg3 from "./assets/coursera-extension-3.png";
-import Navbar from "./Navbar";
+import Navbar from "./home-navbar";
 function Home() {
   return (
     <>
@@ -64,7 +64,7 @@ function Home() {
           </div>
         </div>
         <div className=" bg-amber-300 max-h-screen overflow-hidden">
-          <img src={MyPictureBig} className="object-cover h-full min-w-max" />
+          {/* <img src={MyPictureBig} className="object-cover h-full min-w-max" /> */}
         </div>
       </div>
       <div className="h-fit snap-start flex flex-col justify-center items-center">
