@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import { HiAcademicCap } from "react-icons/hi";
+import { NavLink } from "react-router-dom";
 
-function Navbar() {
+function HomeNavbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   return (
     <nav className="shadow-2xl z-10 sticky top-0 bg-black px-2 sm:px-4 py-4 text-white">
       <div className="flex flex-wrap justify-between items-center w-full">
-        <a href="#" className="flex items-center">
+        <NavLink to="/" className="flex items-center">
           <HiAcademicCap className="text-4xl" />
           <span className="self-center text-3xl font-montserrat font-bold whitespace-nowrap pl-2">
             HT-Dat
           </span>
-        </a>
+        </NavLink>
         <button
           type="button"
           className={
@@ -55,44 +56,44 @@ function Navbar() {
         >
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-xl md:font-montserrat">
             <li>
-              <a
-                href="#home"
-                className="block py-2 pr-6 pl-4 text-white border-b border-gray-100 hover:bg-amber-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-              >
-                home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#focused-things"
-                className="block py-2 pr-6 pl-4 text-white border-b border-gray-100 hover:bg-amber-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-              >
-                focused things
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about-me"
-                className="block py-2 pr-6 pl-4 text-white border-b border-gray-100 hover:bg-amber-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+              <NavLink
+                to="/#about-me"
+                className={({ isActive }) =>
+                  "block py-2 pr-6 pl-4 text-white hover:bg-amber-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" +
+                  (isActive
+                    ? " underline underline-offset-8 decoration-white "
+                    : "")
+                }
               >
                 about me
-              </a>
+              </NavLink>
             </li>
+
             <li>
-              <a
-                href="#projects"
-                className="block py-2 pr-6 pl-4 text-white border-b border-gray-100 hover:bg-amber-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-              >
-                projects
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 pr-6 pl-4 text-white hover:bg-amber-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+              <NavLink
+                to="/blog"
+                className={({ isActive }) =>
+                  "block py-2 pr-6 pl-4 text-white hover:bg-amber-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" +
+                  (isActive
+                    ? " underline underline-offset-8 decoration-white "
+                    : "")
+                }
               >
                 blog
-              </a>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/blog/login"
+                className={({ isActive }) =>
+                  "block py-2 pr-6 pl-4 text-white hover:bg-amber-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" +
+                  (isActive
+                    ? " underline underline-offset-8 decoration-white "
+                    : "")
+                }
+              >
+                sign in
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -100,4 +101,4 @@ function Navbar() {
     </nav>
   );
 }
-export default Navbar;
+export default HomeNavbar;
