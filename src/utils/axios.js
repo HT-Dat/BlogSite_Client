@@ -1,5 +1,5 @@
 import axios from "axios";
-import { auth } from "./firebase";
+import { auth } from "./auth/firebase";
 
 const customFetch = axios.create({
   baseURL: process.env.REACT_APP_BASEAPI_URL,

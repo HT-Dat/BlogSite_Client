@@ -4,7 +4,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
-} from "../firebase";
+} from "./firebase";
 import customFetch from "../axios";
 
 const signInWithGoogle = async () => {
