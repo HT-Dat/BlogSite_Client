@@ -2,15 +2,17 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "../Login";
 import LoadingIndicator from "../LoadingIndicator";
-import Home from "../Home";
+import Home from "../home";
 function PageRoutes({ loading }) {
   return loading ? (
     <LoadingIndicator />
   ) : (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/login" element={<Login />} />
-        <Route exact path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
+        <Route path="blog">
+          <Route path="login" element={<Login />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

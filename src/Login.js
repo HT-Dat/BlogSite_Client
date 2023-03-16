@@ -1,6 +1,9 @@
 /* eslint-disable */
 import React, { useState } from "react";
-import { logInWithEmailAndPassword, signInWithGoogle } from "./utils/firebase";
+import {
+  logInWithEmailAndPassword,
+  signInWithGoogle,
+} from "./utils/auth/auth-firebase";
 import { Link } from "react-router-dom";
 import bg from "./assets/login-left.jpg";
 import glogo from "./assets/google.svg";
