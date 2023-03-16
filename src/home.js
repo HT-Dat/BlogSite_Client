@@ -1,4 +1,3 @@
-import React from "react";
 import {
   AiFillGithub,
   AiOutlineUser,
@@ -15,11 +14,11 @@ import MyAvatar from "./assets/my-picture-2.png";
 import ExtensionImg1 from "./assets/coursera-extension-1.png";
 import ExtensionImg2 from "./assets/coursera-extension-2.png";
 import ExtensionImg3 from "./assets/coursera-extension-3.png";
-import Navbar from "./home-navbar";
+import HomeNavbar from "./home-navbar";
 function Home() {
   return (
     <>
-      <Navbar />
+      <HomeNavbar />
       <div id="home" className="snap-start grid grid-cols-1 md:grid-cols-2">
         <div className="grid content-center font-montserrat h-screen">
           <div className="ml-20">
@@ -64,7 +63,7 @@ function Home() {
           </div>
         </div>
         <div className=" bg-amber-300 max-h-screen overflow-hidden">
-          {/* <img src={MyPictureBig} className="object-cover h-full min-w-max" /> */}
+          <img src={MyPictureBig} className="object-cover h-full min-w-max" />
         </div>
       </div>
       <div className="h-fit snap-start flex flex-col justify-center items-center">
@@ -150,8 +149,8 @@ function Home() {
           <AiOutlinePushpin className="text-5xl ml-3" />
         </div>
         <div className="bg-amber-300 m-5 w-full -skew-y-3 grid grid-rows-1 place-items-center overflow-hidden">
-          <div className="h-full w-fit py-6 px-4 bg-none sm:p-6 md:px-48 md:py-10 md:bg-amber-400">
-            <div className="skew-y-3 max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
+          <div className="h-full w-fit py-6 px-4 bg-none sm:p-6 md:px-48 md:py-10">
+            <div className="skew-y-3 max-w-4xl mx-auto grid grid-cols-1 lg:max-w-7xl lg:gap-x-20 lg:grid-cols-2">
               <div className="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
                 <h1 className="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl ">
                   Coursera Get Shareable Link
@@ -204,7 +203,7 @@ function Home() {
                     <circle cx="1" cy="1" r="1"></circle>
                   </svg>
                   <AiOutlineUser className="text-xl text-indigo-600 text-bold" />
-                  30,000+ users
+                  40,000+ users
                 </dd>
               </dl>
               <div className="flex items-center mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
@@ -230,7 +229,7 @@ function Home() {
                   submission.
                 </p>
                 <p className="pt-2">
-                  Currently, the extension is getting 30.000+ users and keeps
+                  Currently, the extension is getting 40.000+ users and keeps
                   growing
                 </p>
               </div>
