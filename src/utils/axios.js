@@ -6,7 +6,6 @@ const customFetch = axios.create({
 });
 customFetch.interceptors.request.use(async (config) => {
   const token = await auth.currentUser.getIdToken();
-  console.log(token);
   if (token) {
     config.headers["Authorization"] = `Bearer ${token}`;
   }

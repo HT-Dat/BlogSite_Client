@@ -16,10 +16,9 @@ const signInWithGoogle = async () => {
 };
 const logInWithEmailAndPassword = async (email, password) => {
   try {
-    const authUser = await signInWithEmailAndPassword(auth, email, password);
-    console.log(await auth.currentUser.getIdToken());
+    await signInWithEmailAndPassword(auth, email, password);
     const a = await customFetch.get("/api/auth/verify-access");
-    console.log(a);
+    alert(a.data.status);
   } catch (err) {
     console.error(err);
   }
