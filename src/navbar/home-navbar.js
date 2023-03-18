@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { HiAcademicCap } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
-import { useUserAuth } from "../routes/firebase-auth-context";
+import { useUserAuth } from "../utils/auth/firebase-auth-context";
 import LinkNavbar from "./link-navbar";
 
 function HomeNavbar() {
   const { user, logOut } = useUserAuth();
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   return (
-    <nav className="shadow-2xl z-10 sticky top-0 bg-black px-2 sm:px-4 py-4 text-white">
+    <nav className="shadow-2xl fixed top-0 z-50 bg-black px-2 sm:px-6 py-4 text-white w-screen">
       <div className="flex flex-wrap justify-between items-center w-full">
         <NavLink to="/" className="flex items-center">
           <HiAcademicCap className="text-4xl" />
@@ -72,13 +72,14 @@ function HomeNavbar() {
             ) : (
               <>
                 <li>
-                  <LinkNavbar to="/blog/content" text="my content" />
-                </li>{" "}
+                  <LinkNavbar to="/blog/my-content" text="my content" />
+                </li>
                 <li>
                   <LinkNavbar
-                    to="/blog/logout"
+                    to="/blog"
                     text="log out"
                     action={logOut}
+                    useIsActive={true}
                   />
                 </li>
               </>
