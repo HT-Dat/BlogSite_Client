@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { HiAcademicCap } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
+import { useUserAuth } from "../routes/firebase-auth-context";
+import LinkNavbar from "./link-navbar";
 
 function HomeNavbar() {
+  const { user, logOut } = useUserAuth();
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   return (
     <nav className="shadow-2xl z-10 sticky top-0 bg-black px-2 sm:px-4 py-4 text-white">
@@ -56,45 +59,30 @@ function HomeNavbar() {
         >
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-xl md:font-montserrat">
             <li>
-              <NavLink
-                to="/#about-me"
-                className={({ isActive }) =>
-                  "block py-2 pr-6 pl-4 text-white hover:bg-amber-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" +
-                  (isActive
-                    ? " underline underline-offset-8 decoration-white "
-                    : "")
-                }
-              >
-                about me
-              </NavLink>
+              <LinkNavbar to="/#about-me" text="about me" />
             </li>
 
             <li>
-              <NavLink
-                to="/blog"
-                className={({ isActive }) =>
-                  "block py-2 pr-6 pl-4 text-white hover:bg-amber-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" +
-                  (isActive
-                    ? " underline underline-offset-8 decoration-white "
-                    : "")
-                }
-              >
-                blog
-              </NavLink>
+              <LinkNavbar to="/blog" text="blog" />
             </li>
-            <li>
-              <NavLink
-                to="/blog/login"
-                className={({ isActive }) =>
-                  "block py-2 pr-6 pl-4 text-white hover:bg-amber-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" +
-                  (isActive
-                    ? " underline underline-offset-8 decoration-white "
-                    : "")
-                }
-              >
-                sign in
-              </NavLink>
-            </li>
+            {!user ? (
+              <li>
+                <LinkNavbar to="/blog/login" text="sign in" />
+              </li>
+            ) : (
+              <>
+                <li>
+                  <LinkNavbar to="/blog/content" text="my content" />
+                </li>{" "}
+                <li>
+                  <LinkNavbar
+                    to="/blog/logout"
+                    text="log out"
+                    action={logOut}
+                  />
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>

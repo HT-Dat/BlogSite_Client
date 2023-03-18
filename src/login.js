@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import bg from "./assets/login-left.jpg";
 import glogo from "./assets/google.svg";
-import HomeNavbar from "./home-navbar";
+import HomeNavbar from "./navbar/home-navbar";
 import { useUserAuth } from "./routes/firebase-auth-context";
 import customFetch from "./utils/axios";
 
@@ -17,19 +17,16 @@ function Login() {
     setError("");
     try {
       await logIn(email, password);
-      let response = await customFetch.get("/api/auth/verify-access");
-      let responseMessage = response.data;
-      switch (responseMessage.status) {
-        case "unregistered":
-          logOut();
-          alert("Unregisted account");
-          break;
-        case "registered":
-          navigate("/");
-          break;
-      }
-      if (responseMessage.status == "unregistered") {
-      }
+      // let response = await customFetch.get("/api/auth/verify-access");
+      // let responseMessage = response.data;
+      // switch (responseMessage.status) {
+      //   case "unregistered":
+      //     logOut();
+      //     break;
+      //   case "registered":
+      //     navigate("/");
+      //     break;
+      // }
     } catch (err) {
       setError(err.message);
     }
@@ -37,7 +34,6 @@ function Login() {
 
   return (
     <div className="flex flex-col h-screen">
-      <HomeNavbar />
       <div
         className="h-full flex-row md:grid grid-cols-5 bg-no-repeat bg-cover text-center"
         style={{ backgroundImage: `url(${bg})` }}

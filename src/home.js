@@ -14,11 +14,10 @@ import MyAvatar from "./assets/my-picture-2.png";
 import ExtensionImg1 from "./assets/coursera-extension-1.png";
 import ExtensionImg2 from "./assets/coursera-extension-2.png";
 import ExtensionImg3 from "./assets/coursera-extension-3.png";
-import HomeNavbar from "./home-navbar";
+import HomeNavbar from "./navbar/home-navbar";
 function Home() {
   return (
     <>
-      <HomeNavbar />
       <div id="home" className="snap-start grid grid-cols-1 md:grid-cols-2">
         <div className="grid content-center font-montserrat h-screen">
           <div className="ml-20">
