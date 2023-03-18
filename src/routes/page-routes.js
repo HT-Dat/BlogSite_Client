@@ -4,10 +4,12 @@ import Login from "../login";
 import LoadingIndicator from "../loading-indicator";
 import Home from "../home";
 import BlogHome from "../blogs/blog-home";
-import { UserAuthContextProvider } from "./firebase-auth-context";
-import ProtectedRoute from "../utils/auth/protected-route";
-import SpecialRoute from "../utils/auth/special-route";
+import { UserAuthContextProvider } from "../utils/auth/firebase-auth-context";
+import ProtectedRoute from "./protected-route";
+import SpecialRoute from "./special-route";
 import HomeNavbar from "../navbar/home-navbar";
+import BlogContentIndex from "../blogs/blog-content-index";
+
 function PageRoutes({ loading }) {
   return loading ? (
     <LoadingIndicator />
@@ -34,6 +36,14 @@ function PageRoutes({ loading }) {
                   <SpecialRoute>
                     <Login />
                   </SpecialRoute>
+                }
+              />
+              <Route
+                path="my-content"
+                element={
+                  <ProtectedRoute>
+                    <BlogContentIndex />
+                  </ProtectedRoute>
                 }
               />
             </Route>

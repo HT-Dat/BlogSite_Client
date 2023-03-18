@@ -1,5 +1,5 @@
 import { Navigate } from "react-router-dom";
-import { useUserAuth } from "../../routes/firebase-auth-context";
+import { useUserAuth } from "../utils/auth/firebase-auth-context";
 const ProtectedRoute = ({ children }) => {
   const { user } = useUserAuth();
 

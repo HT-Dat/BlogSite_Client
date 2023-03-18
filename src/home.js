@@ -18,7 +18,10 @@ import HomeNavbar from "./navbar/home-navbar";
 function Home() {
   return (
     <>
-      <div id="home" className="snap-start grid grid-cols-1 md:grid-cols-2">
+      <div
+        id="home"
+        className="snap-start grid grid-cols-1 md:grid-cols-2 mt-16"
+      >
         <div className="grid content-center font-montserrat h-screen">
           <div className="ml-20">
             <div className="text-amber-400 font-extrabold text-2xl">
