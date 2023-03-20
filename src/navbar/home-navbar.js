@@ -7,6 +7,7 @@ import LinkNavbar from "./link-navbar";
 function HomeNavbar() {
   const { userFromFirebase, logOut } = useUserAuth();
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+
   return (
     <nav className="shadow-2xl fixed top-0 z-50 bg-black px-2 sm:px-6 py-4 text-white w-screen">
       <div className="flex flex-wrap justify-between items-center w-full">
