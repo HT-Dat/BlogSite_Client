@@ -8,17 +8,19 @@ import {
   signInWithPopup,
   googleProvider,
 } from "./firebase";
-
+import customFetch from "../axios";
 const userAuthContext = createContext();
 
 export function UserAuthContextProvider({ children }) {
-  const [user, setUser] = useState();
-
-  function logIn(email, password) {
-    return signInWithEmailAndPassword(auth, email, password);
+  const [userFromFirebase, setUserFromFirebase] = useState();
+  const [userFromBackend, setUserFromBackend] = useState();
+  async function logIn(email, password) {
+    await signInWithEmailAndPassword(auth, email, password);
   }
-  function logInWithGoogle() {
-    return signInWithPopup(auth, googleProvider);
+  async function logInWithGoogle() {
+    await signInWithPopup(auth, googleProvider);
+    let response = await customFetch.post("/api/auth/register");
+    setUserFromBackend(response.data);
   }
   function signUp(email, password) {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -26,9 +28,10 @@ export function UserAuthContextProvider({ children }) {
   function logOut() {
     return signOut(auth);
   }
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
+      setUserFromFirebase(currentUser);
     });
     return () => {
       unsubscribe();
@@ -37,7 +40,7 @@ export function UserAuthContextProvider({ children }) {
 
   return (
     <userAuthContext.Provider
-      value={{ user, logIn, signUp, logOut, logInWithGoogle }}
+      value={{ userFromFirebase, logIn, signUp, logOut, logInWithGoogle }}
     >
       {children}
     </userAuthContext.Provider>

@@ -1,7 +1,7 @@
 import BigTitle from "./big-title";
 import { useUserAuth } from "../utils/auth/firebase-auth-context";
 function BlogHome() {
-  const { user } = useUserAuth();
+  const { userFromFirebase } = useUserAuth();
   return (
     <>
       <div className="mx-auto max-w-screen-lg mt-16">

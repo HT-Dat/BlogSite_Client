@@ -15,7 +15,7 @@ function Login() {
     e.preventDefault();
     setError("");
     try {
-      await logIn(email, password);
+      logIn(email, password);
       // let response = await customFetch.get("/api/auth/verify-access");
       // let responseMessage = response.data;
       // switch (responseMessage.status) {
@@ -104,7 +104,7 @@ function Login() {
             </div>
             <div
               className="flex justify-center items-center cursor-pointer px-12 py-3 mt-5 font-semibold text-gray-900 bg-white border-2 border-gray-500 rounded-full shadow outline-none hover:bg-blue-50 hover:border-blue-400 hover:shadow-2xl focus:outline-none"
-              onClick={logInWithGoogle}
+              onClick={handleGoogleLogin}
             >
               <img src={glogo} />
               <p className="pl-5">Sign in with Google</p>

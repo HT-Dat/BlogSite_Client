@@ -5,7 +5,7 @@ import { useUserAuth } from "../utils/auth/firebase-auth-context";
 import LinkNavbar from "./link-navbar";
 
 function HomeNavbar() {
-  const { user, logOut } = useUserAuth();
+  const { userFromFirebase, logOut } = useUserAuth();
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   return (
     <nav className="shadow-2xl fixed top-0 z-50 bg-black px-2 sm:px-6 py-4 text-white w-screen">
@@ -65,7 +65,7 @@ function HomeNavbar() {
             <li>
               <LinkNavbar to="/blog" text="blog" />
             </li>
-            {!user ? (
+            {!userFromFirebase ? (
               <li>
                 <LinkNavbar to="/blog/login" text="sign in" />
               </li>
