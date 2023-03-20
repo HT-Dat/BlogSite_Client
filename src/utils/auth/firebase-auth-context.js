@@ -8,12 +8,15 @@ import {
   signInWithPopup,
   googleProvider,
 } from "./firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+
 import customFetch from "../axios";
 const userAuthContext = createContext();
 
 export function UserAuthContextProvider({ children }) {
-  const [userFromFirebase, setUserFromFirebase] = useState();
   const [userFromBackend, setUserFromBackend] = useState();
+  const [user, loading, error] = useAuthState(auth);
+  const userFromFirebase = user;
   async function logIn(email, password) {
     await signInWithEmailAndPassword(auth, email, password);
   }
@@ -29,18 +32,27 @@ export function UserAuthContextProvider({ children }) {
     return signOut(auth);
   }
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUserFromFirebase(currentUser);
-    });
-    return () => {
-      unsubscribe();
-    };
-  }, []);
-
+  // useEffect(() => {
+  //   const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+  //     setUserFromFirebase(currentUser);
+  //   });
+  //   return () => {
+  //     unsubscribe();
+  //   };
+  // }, []);
+  // useEffect(() => {
+  //   setUserFromFirebase(user);
+  // }, [user]);
   return (
     <userAuthContext.Provider
-      value={{ userFromFirebase, logIn, signUp, logOut, logInWithGoogle }}
+      value={{
+        userFromFirebase,
+        logIn,
+        signUp,
+        logOut,
+        logInWithGoogle,
+        loading,
+      }}
     >
       {children}
     </userAuthContext.Provider>
