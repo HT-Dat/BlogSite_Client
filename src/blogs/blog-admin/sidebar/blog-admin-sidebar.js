@@ -3,24 +3,23 @@ import { MdOutlineArticle, MdOutlineChat } from "react-icons/md";
 import { HiOutlineChartBar } from "react-icons/hi2";
 import { VscSettingsGear } from "react-icons/vsc";
 import { AiOutlineMessage } from "react-icons/ai";
-import SidebarButton from "./blog-content-sidebar-button";
-import { useUserAuth } from "../../utils/auth/firebase-auth-context";
-export default function BlogContentSidebar() {
+import SidebarButton from "./blog-admin-sidebar-button";
+import { useUserAuth } from "../../../utils/auth/firebase-auth-context";
+export default function BlogAdminSidebar() {
   const { userFromFirebase } = useUserAuth();
-  console.log(userFromFirebase.photoURL);
   return (
     <aside className="fixed left-0 bg-black/95 w-80 h-screen transition-transform -translate-x-full sm:translate-x-0">
       <div className="h-full py-4 overflow-y-auto">
         <ul className="space-y-2">
           <li>
             <div className="flex justify-around px-16 pt-10 pb-10 text-white">
-              <div>
-                <p className="font-medium text-lg">
+              <div className="">
+                <p className="font-medium text-lg max-w-[130px]">
                   {userFromFirebase.displayName}
                 </p>
                 <p className="text-yellow-300">Welcome back!</p>
               </div>
-              <div>
+              <div className="min-w-fit">
                 <img
                   src={userFromFirebase.photoURL || userFromFirebase}
                   className="h-12 w-12 bg-white rounded-lg border-2"
@@ -36,9 +35,16 @@ export default function BlogContentSidebar() {
           </li>
           <li>
             <SidebarButton
-              to="/blog/my-content"
+              to="/blog/my-content/home"
               icon={MdOutlineArticle}
               text="Home"
+            />
+          </li>
+          <li>
+            <SidebarButton
+              to="/blog/my-content/posts"
+              icon={MdOutlineArticle}
+              text="Post"
             />
           </li>
           <li>

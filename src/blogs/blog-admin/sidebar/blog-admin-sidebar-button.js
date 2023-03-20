@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { MdOutlineArticle } from "react-icons/md";
 export default function SidebarButton({ to, text, icon }) {
   const Icon = icon;
   return (
