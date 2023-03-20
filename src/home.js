@@ -71,16 +71,16 @@ function Home() {
       <div className="h-fit snap-start flex flex-col justify-center items-center">
         <div
           id="focused-things"
-          className="font-montserrat text-4xl font-bold pt-32 text-sky-900"
+          className="font-montserrat text-4xl font-bold pt-32"
         >
           Things I focus on...
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-2 xl:gap-32 w-9/12 ">
           <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-125 duration-300 rounded-xl m-5 shadow-md flex flex-col items-center">
             <div className="bg-gradient-to-br from-yellow-200 via-yellow-400 to-yellow-400 rounded-full flex items-center justify-center w-32 h-32">
-              <FaReact className="text-6xl text-sky-900" />
+              <FaReact className="text-6xl " />
             </div>
-            <div className="text-3xl p-7 text-sky-900 font-montserrat font-semibold">
+            <div className="text-3xl p-7 font-montserrat font-semibold">
               ReactJs
             </div>
             <div className="text-center text-lg ml-5 mr-5 mb-5 font-karla">
@@ -90,9 +90,9 @@ function Home() {
           </div>
           <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-125 duration-300 rounded-xl m-5 shadow-md flex flex-col items-center">
             <div className="bg-gradient-to-br from-yellow-200 via-yellow-400 to-yellow-400 rounded-full flex items-center justify-center w-32 h-32">
-              <SiDotnet className="text-6xl text-sky-900" />
+              <SiDotnet className="text-6xl " />
             </div>
-            <div className="text-3xl p-7 text-sky-900 font-montserrat font-semibold">
+            <div className="text-3xl p-7 font-montserrat font-semibold">
               DotNet
             </div>
 
@@ -103,9 +103,9 @@ function Home() {
           </div>
           <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-125 duration-300 rounded-xl m-5 shadow-md flex flex-col items-center">
             <div className="bg-gradient-to-br from-yellow-200 via-yellow-400 to-yellow-400 rounded-full flex items-center justify-center w-32 h-32">
-              <FaDocker className="text-6xl text-sky-900" />
+              <FaDocker className="text-6xl " />
             </div>
-            <div className="text-3xl p-7 text-sky-900 font-montserrat font-semibold">
+            <div className="text-3xl p-7 font-montserrat font-semibold">
               Docker
             </div>
             <div className="text-center text-lg ml-5 mr-5 mb-5 font-karla">
@@ -145,7 +145,7 @@ function Home() {
         </div>
         <div
           id="projects"
-          className="flex font-montserrat text-4xl font-bold pt-5 text-sky-900 justify-center items-center -skew-y-3"
+          className="flex font-montserrat text-4xl font-bold pt-5 justify-center items-center -skew-y-3"
         >
           <div>Personal project</div>
           <AiOutlinePushpin className="text-5xl ml-3" />
