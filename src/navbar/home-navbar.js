@@ -9,7 +9,7 @@ function HomeNavbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   return (
-    <nav className="shadow-2xl fixed top-0 z-50 bg-black px-2 sm:px-6 py-4 text-white w-screen">
+    <nav className="fixed top-0 z-50 bg-black px-2 sm:px-6 py-4 text-white w-screen">
       <div className="flex flex-wrap justify-between items-center w-full">
         <NavLink to="/" className="flex items-center">
           <HiAcademicCap className="text-4xl" />
@@ -60,20 +60,24 @@ function HomeNavbar() {
         >
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-xl md:font-montserrat">
             <li>
-              <LinkNavbar to="/#about-me" text="about me" />
+              <LinkNavbar to="/#about-me" text="about me" isOnlyEnd={true} />
             </li>
 
             <li>
-              <LinkNavbar to="/blog" text="blog" />
+              <LinkNavbar to="/blog" text="blog" isOnlyEnd={true} />
             </li>
             {!userFromFirebase ? (
               <li>
-                <LinkNavbar to="/blog/login" text="sign in" />
+                <LinkNavbar to="/blog/login" text="sign in" isOnlyEnd={true} />
               </li>
             ) : (
               <>
                 <li>
-                  <LinkNavbar to="/blog/my-content" text="my content" />
+                  <LinkNavbar
+                    to="/blog/my-content"
+                    text="my content"
+                    isOnlyEnd={false}
+                  />
                 </li>
                 <li>
                   <LinkNavbar

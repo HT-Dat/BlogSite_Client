@@ -1,5 +1,11 @@
 import { NavLink } from "react-router-dom";
-export default function LinkNavbar({ to, text, action, useIsActive }) {
+export default function LinkNavbar({
+  to,
+  text,
+  action,
+  useIsActive,
+  isOnlyEnd,
+}) {
   return (
     <NavLink
       to={to}
@@ -10,7 +16,7 @@ export default function LinkNavbar({ to, text, action, useIsActive }) {
           : "")
       }
       onClick={action}
-      end
+      end={isOnlyEnd}
     >
       {text}
     </NavLink>

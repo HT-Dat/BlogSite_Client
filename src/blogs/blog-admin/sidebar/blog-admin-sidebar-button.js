@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
-export default function SidebarButton({ to, text, icon }) {
+export default function SidebarButton({ to, text, icon, isOnlyEnd }) {
   const Icon = icon;
   return (
     <NavLink
       to={to}
       className="flex items-center py-3 text-white rounded-lg hover:bg-black/100 transition-all ease-in duration-150"
+      end={isOnlyEnd}
     >
       {({ isActive }) => (
         <>

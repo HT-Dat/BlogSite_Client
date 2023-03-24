@@ -75,7 +75,7 @@ function Login() {
                 <div className="flex justify-start gap-3">
                   <input
                     type="checkbox"
-                    className="place-self-center rounded text-yellow-500 form-checkbox"
+                    className="place-self-center rounded text-yellow-500"
                   ></input>
                   <div>Remember me</div>
                 </div>

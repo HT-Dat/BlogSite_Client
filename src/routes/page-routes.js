@@ -9,11 +9,12 @@ import ProtectedRoute from "./protected-route";
 import SpecialRoute from "./special-route";
 import HomeNavbar from "../navbar/home-navbar";
 import BlogAdminIndex from "../blogs/blog-admin/blog-admin-index";
-import BlogAdminPosts from "../blogs/blog-admin/blog-admin-posts";
+import BlogAdminPosts from "../blogs/blog-admin/posts/blog-admin-posts";
 import BlogAdminHome from "../blogs/blog-admin/blog-admin-home";
 import BlogAdminAboutYou from "../blogs/blog-admin/blog-admin-about-you";
 import BlogAdminComments from "../blogs/blog-admin/blog-admin-comments";
 import BlogAdminStats from "../blogs/blog-admin/blog-admin-stats";
+import BlogAdminEditPost from "../blogs/blog-admin/posts/blog-admin-edit-post";
 function PageRoutes({ loading }) {
   return loading ? (
     <LoadingIndicator />
@@ -50,11 +51,15 @@ function PageRoutes({ loading }) {
                   </ProtectedRoute>
                 }
               >
-                <Route index path="home" element={BlogAdminHome} />
-                <Route path="posts" element={BlogAdminPosts} />
-                <Route path="comments" element={BlogAdminComments} />
-                <Route path="stats" element={BlogAdminStats} />
-                <Route path="about-you" element={BlogAdminAboutYou} />
+                <Route index element={<BlogAdminHome />} />
+                <Route path="posts" element={<BlogAdminPosts />}>
+                  {/* <Route index /> */}
+                  <Route path="edit/:postId" element={<BlogAdminEditPost />} />
+                </Route>
+
+                <Route path="comments" element={<BlogAdminComments />} />
+                <Route path="stats" element={<BlogAdminStats />} />
+                <Route path="about-you" element={<BlogAdminAboutYou />} />
               </Route>
             </Route>
           </Routes>
