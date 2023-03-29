@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import bg from "./assets/login-left.jpg";
 import glogo from "./assets/google.svg";
 import { useUserAuth } from "./utils/auth/firebase-auth-context";
-import customFetch from "./utils/axios";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -16,16 +15,6 @@ function Login() {
     setError("");
     try {
       logIn(email, password);
-      // let response = await customFetch.get("/api/auth/verify-access");
-      // let responseMessage = response.data;
-      // switch (responseMessage.status) {
-      //   case "unregistered":
-      //     logOut();
-      //     break;
-      //   case "registered":
-      //     navigate("/");
-      //     break;
-      // }
     } catch (err) {
       setError(err.message);
     }

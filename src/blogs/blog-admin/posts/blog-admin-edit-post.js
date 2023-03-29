@@ -2,17 +2,15 @@ import { IoSend } from "react-icons/io5";
 import { BsUpload } from "react-icons/bs";
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router";
-import customFetch from "../../../utils/axios";
-
+import { PostAPI } from "../../../apis/post-api";
 import AdminEditor from "./blog-admin-editor";
 import EditorSidebar from "./blog-admin-edit-post-sidebar";
-import { async } from "@firebase/util";
 export default function BlogAdminEditPost() {
   const { postId } = useParams();
-  //get post data
+
   useEffect(() => {
     async function getPostData() {
-      const postDataResp = (await customFetch.get(`/api/post/${postId}`)).data;
+      const postDataResp = await PostAPI.get(postId);
       setTitle(postDataResp.title);
       setEditorData(postDataResp.content);
     }
@@ -20,7 +18,7 @@ export default function BlogAdminEditPost() {
   }, []);
 
   const [labels, setLabels] = useState();
-  const [title, setTitle] = useState();
+  const [title, setTitle] = useState("");
   const [editorData, setEditorData] = useState("");
   const toolbarRef = useRef();
   const onWriterChange = (event, editor) => {
@@ -32,7 +30,7 @@ export default function BlogAdminEditPost() {
       content: editorData,
       title: title,
     };
-    const resp = await customFetch.put(`/api/post/${postId}`, postObject);
+    const response = await PostAPI.savePost(postObject, postId);
   }
   return (
     <>

@@ -10,7 +10,7 @@ import {
 } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-import customFetch from "../axios";
+import { UserAPI } from "../../apis/user-api";
 const userAuthContext = createContext();
 
 export function UserAuthContextProvider({ children }) {
@@ -22,13 +22,14 @@ export function UserAuthContextProvider({ children }) {
   }
   async function logInWithGoogle() {
     await signInWithPopup(auth, googleProvider);
-    let response = await customFetch.post("/api/auth/register");
-    setUserFromBackend(response.data);
+    let response = await UserAPI.register();
+    setUserFromBackend(response);
   }
   function signUp(email, password) {
     return createUserWithEmailAndPassword(auth, email, password);
   }
   function logOut() {
+    localStorage.clear();
     return signOut(auth);
   }
 
@@ -40,9 +41,16 @@ export function UserAuthContextProvider({ children }) {
   //     unsubscribe();
   //   };
   // }, []);
-  // useEffect(() => {
-  //   setUserFromFirebase(user);
-  // }, [user]);
+
+  useEffect(() => {
+    async function setTokenToLocalStorage() {
+      const token = await user.getIdToken();
+      if (user) {
+        localStorage.setItem("userToken", token);
+      }
+    }
+    setTokenToLocalStorage();
+  }, [user]);
   return (
     <userAuthContext.Provider
       value={{

@@ -5,14 +5,14 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { BsPlusLg } from "react-icons/bs";
 import SidebarButton from "./blog-admin-sidebar-button";
 import { useUserAuth } from "../../../utils/auth/firebase-auth-context";
-import customFetch from "../../../utils/axios";
+import { PostAPI } from "../../../apis/post-api";
 import { useNavigate } from "react-router-dom";
 
 export default function BlogAdminSidebar() {
   const { userFromFirebase } = useUserAuth();
   const navigate = useNavigate();
   async function handleNewPost() {
-    const createdPost = (await customFetch.post("/api/post")).data;
+    const createdPost = await PostAPI.newPost();
     navigate(`/blog/my-content/posts/edit/${createdPost.id}`);
   }
   return (
