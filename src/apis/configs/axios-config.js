@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import { auth } from "../../utils/auth/firebase";
 export const api = axios.create({
   baseURL: process.env.REACT_APP_BASEAPI_URL,
 });
@@ -22,9 +22,9 @@ api.interceptors.response.use(undefined, (error) => {
   return errorHandler(error);
 });
 api.interceptors.request.use(async (config) => {
-  const userToken = localStorage.getItem("userToken");
-  if (userToken) {
-    config.headers["Authorization"] = `Bearer ${userToken}`;
+  const token = await auth.currentUser.getIdToken();
+  if (token) {
+    config.headers["Authorization"] = `Bearer ${token}`;
   }
   return config;
 });
