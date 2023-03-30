@@ -29,7 +29,6 @@ export function UserAuthContextProvider({ children }) {
     return createUserWithEmailAndPassword(auth, email, password);
   }
   function logOut() {
-    localStorage.clear();
     return signOut(auth);
   }
 
@@ -42,15 +41,15 @@ export function UserAuthContextProvider({ children }) {
   //   };
   // }, []);
 
-  useEffect(() => {
-    async function setTokenToLocalStorage() {
-      const token = await user.getIdToken();
-      if (user) {
-        localStorage.setItem("userToken", token);
-      }
-    }
-    setTokenToLocalStorage();
-  }, [user]);
+  // useEffect(() => {
+  //   async function setTokenToLocalStorage() {
+  //     if (user) {
+  //       const token = await user.getIdToken();
+  //       localStorage.setItem("userToken", token);
+  //     }
+  //   }
+  //   setTokenToLocalStorage();
+  // }, [user]);
   return (
     <userAuthContext.Provider
       value={{
