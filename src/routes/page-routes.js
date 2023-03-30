@@ -54,9 +54,11 @@ function PageRoutes({ loading }) {
                 <Route index element={<BlogAdminHome />} />
                 <Route path="posts" element={<BlogAdminPosts />}>
                   {/* <Route index /> */}
-                  <Route path="edit/:postId" element={<BlogAdminEditPost />} />
                 </Route>
-
+                <Route
+                  path="posts/edit/:postId"
+                  element={<BlogAdminEditPost />}
+                />
                 <Route path="comments" element={<BlogAdminComments />} />
                 <Route path="stats" element={<BlogAdminStats />} />
                 <Route path="about-you" element={<BlogAdminAboutYou />} />
