@@ -1,11 +1,11 @@
-import BlogContentSidebar from "./sidebar/blog-admin-sidebar";
+import BlogAdminSidebar from "./sidebar/blog-admin-sidebar";
 import { Outlet } from "react-router-dom";
 export default function BlogAdminIndex() {
   return (
     <>
       <div className="h-screen">
         <div className="pt-[68px] h-full">
-          <BlogContentSidebar />
+          <BlogAdminSidebar />
           <div className="pl-80 h-full">
             <Outlet />
           </div>
