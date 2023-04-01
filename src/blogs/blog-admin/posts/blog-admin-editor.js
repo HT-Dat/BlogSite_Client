@@ -5,12 +5,28 @@ export default function AdminEditor({
   editorData,
   onWriterChange,
 }) {
+  const editorConfiguration = {
+    simpleUpload: {
+      // The URL that the images are uploaded to.
+      uploadUrl: `${process.env.REACT_APP_BASEAPI_URL}/api/post/upload-editor-image`,
+
+      // Enable the XMLHttpRequest.withCredentials property.
+      withCredentials: true,
+
+      // Headers sent along with the XMLHttpRequest to the upload server.
+      headers: {
+        "X-CSRF-TOKEN": "CSRF-Token",
+        Authorization: `Bearer ${localStorage.getItem("firebase_auth_token")}`,
+      },
+    },
+  };
   return (
     <div className="w-full h-full">
-      <div className="max-w-3xl mx-auto h-full pt-5">
+      <div className="max-w-xl mx-auto h-full pt-5">
         <div className="bg-white w-full h-full overflow-auto prose">
           <CKEditor
             editor={Editor}
+            config={editorConfiguration}
             data={editorData}
             onReady={(editor) => {
               if (toolbarRef.current) {
