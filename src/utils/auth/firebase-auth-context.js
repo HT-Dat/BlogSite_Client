@@ -32,14 +32,23 @@ export function UserAuthContextProvider({ children }) {
     return signOut(auth);
   }
 
-  // useEffect(() => {
-  //   const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-  //     setUserFromFirebase(currentUser);
-  //   });
-  //   return () => {
-  //     unsubscribe();
-  //   };
-  // }, []);
+  useEffect(() => {
+    const unsubscribe = auth.onIdTokenChanged(async (user) => {
+      if (user) {
+        // User is signed in or the token was refreshed
+        const token = await user.getIdToken();
+        localStorage.setItem("firebase_auth_token", token);
+      } else {
+        // User is signed out
+        localStorage.removeItem("firebase_auth_token");
+      }
+    });
+    // Clean up the observer when the component is unmounted
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
 
   // useEffect(() => {
   //   async function setTokenToLocalStorage() {
