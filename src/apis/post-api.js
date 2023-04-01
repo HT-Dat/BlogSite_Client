@@ -32,4 +32,12 @@ export const PostAPI = {
     });
     return response.data;
   },
+  uploadImg: async function (file) {
+    const response = await api.request({
+      url: `/api/post/upload-editor-image`,
+      method: "POST",
+      data: file,
+    });
+    return response;
+  },
 };
