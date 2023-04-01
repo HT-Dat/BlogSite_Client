@@ -2,6 +2,7 @@ import axios from "axios";
 import { auth } from "../../utils/auth/firebase";
 export const api = axios.create({
   baseURL: process.env.REACT_APP_BASEAPI_URL,
+  withCredentials: true,
 });
 
 // defining a custom error handler for all APIs
