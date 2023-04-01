@@ -3,7 +3,7 @@ import { BsUpload } from "react-icons/bs";
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router";
 import { PostAPI } from "../../../apis/post-api";
-import AdminEditor from "./blog-admin-editor";
+import AdminEditor from "./editor/blog-admin-editor";
 import EditorSidebar from "./blog-admin-edit-post-sidebar";
 export default function BlogAdminEditPost() {
   const { postId } = useParams();
@@ -13,24 +13,42 @@ export default function BlogAdminEditPost() {
       const postDataResp = await PostAPI.get(postId);
       setTitle(postDataResp.title);
       setEditorData(postDataResp.content);
+      setPermalink(postDataResp.permalink);
     }
     getPostData();
   }, []);
 
   const [labels, setLabels] = useState();
+  const [permalink, setPermalink] = useState("");
   const [title, setTitle] = useState("");
   const [editorData, setEditorData] = useState("");
   const toolbarRef = useRef();
+
+  function handlePermaLinkChange(value) {
+    console.log(value);
+    setPermalink(value);
+  }
   const onWriterChange = (event, editor) => {
     setEditorData(editor.getData());
   };
   async function sendPostData() {
+    // A regular expression (/\//g) that matches all forward slashes.
+    //The g flag after the regular expression pattern indicates that it should perform a global search,
+    //meaning it will find all occurrences of the pattern, not just the first one.
+
+    //An empty string (""), which is the replacement value for each forward slash found in the input string.
+
+    const encodedURL = encodeURIComponent(permalink.replace(/\//g, ""));
     const postObject = {
       id: postId,
       content: editorData,
       title: title,
+      permalink: encodeURIComponent(encodedURL),
     };
     const response = await PostAPI.savePost(postObject, postId);
+    setTitle(response.title);
+    setEditorData(response.content);
+    setPermalink(response.permalink);
   }
   return (
     <>
@@ -72,7 +90,10 @@ export default function BlogAdminEditPost() {
           editorData={editorData}
           onWriterChange={onWriterChange}
         />
-        <EditorSidebar />
+        <EditorSidebar
+          onPermalinkChange={handlePermaLinkChange}
+          permaLink={permalink}
+        />
       </div>
     </>
   );
