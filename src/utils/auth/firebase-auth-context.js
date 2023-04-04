@@ -22,8 +22,6 @@ export function UserAuthContextProvider({ children }) {
   }
   async function logInWithGoogle() {
     await signInWithPopup(auth, googleProvider);
-    let response = await UserAPI.register();
-    setUserFromBackend(response);
   }
   function signUp(email, password) {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -49,20 +47,35 @@ export function UserAuthContextProvider({ children }) {
       unsubscribe();
     };
   }, []);
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      if (currentUser) {
+        const response = await UserAPI.register();
+        setUserFromBackend(response);
+      } else {
+        // User is signed out
+        setUserFromBackend(null);
+      }
+    });
+    // Clean up the observer when the component is unmounted
 
+    return () => {
+      unsubscribe();
+    };
+  }, []);
   // useEffect(() => {
-  //   async function setTokenToLocalStorage() {
-  //     if (user) {
-  //       const token = await user.getIdToken();
-  //       localStorage.setItem("userToken", token);
-  //     }
-  //   }
-  //   setTokenToLocalStorage();
-  // }, [user]);
+  //   const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+  //     setUserFromFirebase(currentUser);
+  //   });
+  //   return () => {
+  //     unsubscribe();
+  //   };
+  // }, []);
   return (
     <userAuthContext.Provider
       value={{
         userFromFirebase,
+        userFromBackend,
         logIn,
         signUp,
         logOut,
