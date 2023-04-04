@@ -1,13 +1,39 @@
 import BigTitle from "./big-title";
-import { useUserAuth } from "../utils/auth/firebase-auth-context";
-function BlogHome() {
-  const { userFromFirebase } = useUserAuth();
+import HomePostList from "./home-post-list";
+export default function BlogHome() {
   return (
     <>
       <div className="mx-auto max-w-screen-lg mt-16">
         <BigTitle />
+
+        <div className="flex pt-16">
+          <div className="w-9/12 ">
+            <HomePostList />
+          </div>
+          <div className="w-3/12 flex justify-end">
+            <div className="flex flex-col">
+              <p className="w-fit ml-auto font-medium text-lg ">
+                Filter Posts By Tag
+              </p>
+              <p className="w-fit ml-auto text-sm text-gray-500 pb-3">
+                (Not yet working)
+              </p>
+              <div className="w-fit ml-auto text-mono text-xl py-1 px-2 my-1 border-2 border-black">
+                .NET
+              </div>
+              <div className="w-fit ml-auto text-mono text-xl py-1 px-2 my-1 border-2 border-black">
+                DOCKER
+              </div>
+              <div className="w-fit ml-auto text-mono text-xl py-1 px-2 my-1 border-2 border-black">
+                CKEDITOR
+              </div>
+              <div className="w-fit ml-auto text-mono text-xl py-1 px-2 my-1 border-2 border-black">
+                REACT
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
 }
-export default BlogHome;
