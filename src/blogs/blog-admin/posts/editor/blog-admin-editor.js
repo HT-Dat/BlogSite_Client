@@ -26,8 +26,8 @@ export default function AdminEditor({
   };
   return (
     <div className="w-full h-full">
-      <div className="max-w-xl mx-auto h-full pt-5">
-        <div className="bg-white w-full h-full overflow-auto prose">
+      <div className="max-w-2xl mx-auto h-full pt-5">
+        <div className="bg-white w-[700px] h-full overflow-auto prose-lg">
           <CKEditor
             editor={Editor}
             config={editorConfiguration}
