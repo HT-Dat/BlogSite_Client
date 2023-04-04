@@ -2,7 +2,7 @@ import { api } from "./configs/axios-config";
 
 export const UserAPI = {
   register: async function () {
-    const response = api.request({
+    const response = await api.request({
       url: `/api/auth/register`,
       method: "POST",
     });
