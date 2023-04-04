@@ -5,9 +5,14 @@ import { useParams } from "react-router";
 import { PostAPI } from "../../../apis/post-api";
 import AdminEditor from "./editor/blog-admin-editor";
 import EditorSidebar from "./blog-admin-edit-post-sidebar";
+import { useUserAuth } from "../../../utils/auth/firebase-auth-context";
 export default function BlogAdminEditPost() {
-  const { postId } = useParams();
+  const DRAFT = 0;
+  const PENDING = 1;
+  const PUBLISHED = 2;
 
+  const { postId } = useParams();
+  const { userFromBackend } = useUserAuth();
   useEffect(() => {
     async function getPostData() {
       const postDataResp = await PostAPI.get(postId);
@@ -25,25 +30,31 @@ export default function BlogAdminEditPost() {
   const toolbarRef = useRef();
 
   function handlePermaLinkChange(value) {
-    console.log(value);
     setPermalink(value);
   }
   const onWriterChange = (event, editor) => {
     setEditorData(editor.getData());
   };
   async function sendPostData() {
-    // A regular expression (/\//g) that matches all forward slashes.
-    //The g flag after the regular expression pattern indicates that it should perform a global search,
-    //meaning it will find all occurrences of the pattern, not just the first one.
-
-    //An empty string (""), which is the replacement value for each forward slash found in the input string.
-
-    const encodedURL = encodeURIComponent(permalink.replace(/\//g, ""));
     const postObject = {
       id: postId,
       content: editorData,
       title: title,
-      permalink: encodeURIComponent(encodedURL),
+      permalink: permalink,
+      statusId: DRAFT,
+    };
+    const response = await PostAPI.savePost(postObject, postId);
+    setTitle(response.title);
+    setEditorData(response.content);
+    setPermalink(response.permalink);
+  }
+  async function publishPostData() {
+    const postObject = {
+      id: postId,
+      content: editorData,
+      title: title,
+      permalink: permalink,
+      statusId: userFromBackend.isAdmin ? PUBLISHED : PENDING,
     };
     const response = await PostAPI.savePost(postObject, postId);
     setTitle(response.title);
@@ -75,9 +86,14 @@ export default function BlogAdminEditPost() {
                   <BsUpload className="w-4 h-4 m-2" />
                   <p className="pr-1">Save</p>
                 </button>
-                <button className="flex items-center justify-between py-1 px-3 mr-2 text-sm font-medium text-white focus:outline-none bg-amber-400 rounded-lg border border-gray-200 hover:bg-amber-500 focus:z-10 focus:ring-4 focus:ring-gray-200">
+                <button
+                  className="flex items-center justify-between py-1 px-3 mr-2 text-sm font-medium text-white focus:outline-none bg-amber-400 rounded-lg border border-gray-200 hover:bg-amber-500 focus:z-10 focus:ring-4 focus:ring-gray-200"
+                  onClick={publishPostData}
+                >
                   <IoSend className="w-4 h-4 m-2" />
-                  <p className="font-bold pr-1">Post</p>
+                  <p className="font-bold pr-1">
+                    {userFromBackend.isAdmin ? "Post" : "Submit"}
+                  </p>
                 </button>
               </div>
             </div>
