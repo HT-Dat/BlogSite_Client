@@ -5,13 +5,20 @@ import NoPostsImage from "../../../assets/pencilpotscissorsdesk.png";
 
 export default function BlogAdminPosts() {
   const [posts, setPosts] = useState([]);
+  const [triggerReloadPostList, setTriggerReloadPostList] = useState(true);
+
   useEffect(() => {
     async function getPosts() {
-      const response = await PostAPI.getList();
+      const response = await PostAPI.getListAdmin();
       setPosts(response);
     }
-    getPosts();
-  }, []);
+
+    if (triggerReloadPostList) {
+      console.log("trigger trigger");
+      getPosts();
+      setTriggerReloadPostList(false);
+    }
+  }, [triggerReloadPostList]);
   return (
     <div className="bg-slate-100 min-h-full">
       <div className="max-w-5xl mx-auto py-5">
@@ -28,7 +35,13 @@ export default function BlogAdminPosts() {
             </div>
           ) : (
             posts.map((post, index) => {
-              return <PostCard post={post} />;
+              return (
+                <PostCard
+                  post={post}
+                  setTriggerReload={setTriggerReloadPostList}
+                  key={index}
+                />
+              );
             })
           )}
         </div>
