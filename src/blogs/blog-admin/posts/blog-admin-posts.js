@@ -14,7 +14,6 @@ export default function BlogAdminPosts() {
     }
 
     if (triggerReloadPostList) {
-      console.log("trigger trigger");
       getPosts();
       setTriggerReloadPostList(false);
     }
