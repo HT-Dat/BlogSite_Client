@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import LoadingIndicator from "../../loading-indicator";
 import BlogAdminSidebar from "./sidebar/blog-admin-sidebar";
 import { Outlet } from "react-router-dom";
 export default function BlogAdminIndex() {
@@ -7,7 +9,9 @@ export default function BlogAdminIndex() {
         <div className="pt-[68px] h-full">
           <BlogAdminSidebar />
           <div className="pl-80 h-full">
-            <Outlet />
+            <Suspense fallback={<LoadingIndicator />}>
+              <Outlet />
+            </Suspense>
           </div>
         </div>
       </div>
