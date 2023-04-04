@@ -1,7 +1,7 @@
 import { MdOutlineArticle, MdOutlineChat } from "react-icons/md";
 import { HiOutlineChartBar } from "react-icons/hi2";
 import { VscSettingsGear } from "react-icons/vsc";
-import { AiOutlineMessage } from "react-icons/ai";
+import { AiOutlineMessage, AiOutlineAntDesign } from "react-icons/ai";
 import { BsPlusLg } from "react-icons/bs";
 import SidebarButton from "./blog-admin-sidebar-button";
 import { useUserAuth } from "../../../utils/auth/firebase-auth-context";
@@ -56,7 +56,7 @@ export default function BlogAdminSidebar() {
           <li>
             <SidebarButton
               to="/blog/my-content"
-              icon={MdOutlineArticle}
+              icon={AiOutlineAntDesign}
               text="Home"
               isOnlyEnd={true}
             />
