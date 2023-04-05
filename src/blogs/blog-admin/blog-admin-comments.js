@@ -206,7 +206,7 @@ export default function BlogAdminComments() {
           ></path>
         </svg>
         <p className="text-4xl font-bold text-gray-700 capitalize tracking-wide mt-8">
-          This feature currently under development
+          Comments management currently under development
         </p>
         <p className="text-xl text-gray-700 uppercase mt-4">
           It'll be finish soon ... I hope
