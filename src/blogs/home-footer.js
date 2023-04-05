@@ -2,7 +2,7 @@ import { TbLetterZ } from "react-icons/tb";
 import { BsLinkedin } from "react-icons/bs";
 export default function HomeFooter() {
   return (
-    <footer className="bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-3">
+    <footer className="md:sticky bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-3">
       <span className="text-sm text-gray-500 sm:text-center ">
         © 2023{" "}
         <a href="https://flowbite.com/" className="hover:underline">
