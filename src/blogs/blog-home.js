@@ -1,5 +1,6 @@
 import BigTitle from "./big-title";
 import HomePostList from "./home-post-list";
+import HomeFooter from "./home-footer";
 export default function BlogHome() {
   return (
     <>
@@ -34,6 +35,7 @@ export default function BlogHome() {
           </div>
         </div>
       </div>
+      <HomeFooter />
     </>
   );
 }

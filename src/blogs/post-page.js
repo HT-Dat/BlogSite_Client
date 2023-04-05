@@ -4,6 +4,7 @@ import { PostAPI } from "../apis/post-api";
 import { useParams } from "react-router-dom";
 import "../ckeditor-data.css";
 import DOMPurify from "dompurify";
+import HomeFooter from "./home-footer";
 export default function PostPage() {
   const { postPermalink } = useParams();
   const [post, setPost] = useState({
@@ -63,6 +64,7 @@ export default function PostPage() {
           </div>
         </div>
       </div>
+      <HomeFooter />
     </>
   );
 }
