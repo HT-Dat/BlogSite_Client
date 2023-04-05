@@ -25,11 +25,11 @@ export default function PostPage() {
       <div className="absolute -top-10 bg-amber-500 w-full h-[300px] skew-y-6 -z-10"></div>
       <div className="absolute -top-10 bg-amber-300 opacity-90 w-full h-[400px] -skew-y-6 -z-10"></div>
       <div className="mx-auto max-w-screen-lg mt-16">
-        <div className="inline-block font-serif font-extrabold text-6xl pt-6">
+        <div className="inline-block font-serif font-extrabold lg:text-6xl text-3xl pt-6">
           {post.title}
         </div>
         <div className="flex pt-10">
-          <div className="w-9/12">
+          <div className="lg:w-9/12 w-full">
             <div className="flex items-center gap-3 pt-10">
               <img
                 src={post.author?.photoUrl}
@@ -38,11 +38,11 @@ export default function PostPage() {
               ></img>
               <div className="text-lg">{post.author?.displayName}</div>
             </div>
-            <div className="w-[700px] ck-content float-right prose-lg">
+            <div className="lg:w-[700px] w-full ck-content float-right prose-lg p-5">
               <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </div>
           </div>
-          <div className="w-3/12 flex justify-end">
+          <div className=" w-3/12 md:flex hidden justify-end">
             <div className="flex flex-col">
               <p className="w-fit ml-auto font-medium text-lg ">
                 Filter Posts By Tag

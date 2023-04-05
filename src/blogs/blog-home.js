@@ -7,11 +7,11 @@ export default function BlogHome() {
       <div className="mx-auto max-w-screen-lg mt-16">
         <BigTitle />
 
-        <div className="flex pt-16">
-          <div className="w-9/12 ">
+        <div className="flex lg:pt-16">
+          <div className="lg:w-9/12 w-full pr-5">
             <HomePostList />
           </div>
-          <div className="w-3/12 flex justify-end">
+          <div className=" w-3/12 md:flex hidden justify-end">
             <div className="flex flex-col">
               <p className="w-fit ml-auto font-medium text-lg ">
                 Filter Posts By Tag
