@@ -16,7 +16,7 @@ export default function BlogAdminSidebar() {
     navigate(`/blog/my-content/posts/edit/${createdPost.id}`);
   }
   return (
-    <aside className="fixed left-0 bg-black/95 w-80 h-screen transition-transform -translate-x-full sm:translate-x-0 z-50">
+    <aside className="fixed left-0 bg-black/95 w-80 h-screen transition-transform -translate-x-full lg:translate-x-0 z-50">
       <div className="h-full py-4 overflow-y-auto">
         <ul className="space-y-2">
           <li>

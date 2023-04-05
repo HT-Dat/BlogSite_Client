@@ -63,44 +63,40 @@ export default function BlogAdminEditPost() {
   }
   return (
     <>
-      <div className="fixed w-full -ml-80 bg-white">
-        <div className="ml-80">
-          <div className="flex justify-between">
-            <div className="inline-grid w-full">
-              <input
-                className="focus:outline-none h-10 px-2 border-b focus:border-b-2 border-yellow-400 transition ease-in-out delay-700 mr-10"
-                placeholder="Title"
-                value={title}
-                onChange={(e) => {
-                  setTitle(e.target.value);
-                }}
-              ></input>
-              <div ref={toolbarRef} className=""></div>
-            </div>
-            <div className="w-72 bg-white flex items-center">
-              <div className="flex justify-end w-full">
-                <button
-                  className="flex items-center justify-between py-1 px-3 mr-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200"
-                  onClick={sendPostData}
-                >
-                  <BsUpload className="w-4 h-4 m-2" />
-                  <p className="pr-1">Save</p>
-                </button>
-                <button
-                  className="flex items-center justify-between py-1 px-3 mr-2 text-sm font-medium text-white focus:outline-none bg-amber-400 rounded-lg border border-gray-200 hover:bg-amber-500 focus:z-10 focus:ring-4 focus:ring-gray-200"
-                  onClick={publishPostData}
-                >
-                  <IoSend className="w-4 h-4 m-2" />
-                  <p className="font-bold pr-1">
-                    {userFromBackend.isAdmin ? "Post" : "Submit"}
-                  </p>
-                </button>
-              </div>
-            </div>
+      <div className="flex w-full min-w-[400px]">
+        <div className="w-10/12">
+          <input
+            className="w-full focus:outline-none h-10 px-2 border-b focus:border-b-2 border-yellow-400"
+            placeholder="Title"
+            value={title}
+            onChange={(e) => {
+              setTitle(e.target.value);
+            }}
+          ></input>
+          <div ref={toolbarRef}></div>
+        </div>
+        <div className="w-full bg-white flex items-center overflow-x-auto">
+          <div className="flex justify-end w-full">
+            <button
+              className="flex items-center justify-between py-1 mr-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200"
+              onClick={sendPostData}
+            >
+              <BsUpload className="w-4 h-4 m-2" />
+              <p className="pr-1 hidden lg:block">Save</p>
+            </button>
+            <button
+              className="flex items-center justify-between py-1 mr-2 text-sm font-medium text-white focus:outline-none bg-amber-400 rounded-lg border border-gray-200 hover:bg-amber-500 focus:z-10 focus:ring-4 focus:ring-gray-200"
+              onClick={publishPostData}
+            >
+              <IoSend className="w-4 h-4 m-2" />
+              <p className="font-bold pr-1 hidden lg:block">
+                {userFromBackend.isAdmin ? "Post" : "Submit"}
+              </p>
+            </button>
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-between pt-[78px] h-full bg-slate-200">
+      <div className="w-full flex justify-between h-[calc(100%-80px)] bg-slate-200">
         <AdminEditor
           toolbarRef={toolbarRef}
           editorData={editorData}

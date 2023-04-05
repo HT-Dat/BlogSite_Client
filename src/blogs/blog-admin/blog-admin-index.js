@@ -8,7 +8,7 @@ export default function BlogAdminIndex() {
       <div className="h-screen">
         <div className="pt-[68px] h-full">
           <BlogAdminSidebar />
-          <div className="pl-80 h-full">
+          <div className="lg:pl-80 h-full">
             <Suspense fallback={<LoadingIndicator />}>
               <Outlet />
             </Suspense>
