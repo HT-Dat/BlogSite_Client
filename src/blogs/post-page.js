@@ -22,11 +22,13 @@ export default function PostPage() {
 
   return (
     <>
+      <div className="absolute -top-10 bg-amber-500 w-full h-[300px] skew-y-6 -z-10"></div>
+      <div className="absolute -top-10 bg-amber-300 opacity-90 w-full h-[400px] -skew-y-6 -z-10"></div>
       <div className="mx-auto max-w-screen-lg mt-16">
-        <div className="inline-block font-serif font-extrabold text-6xl">
+        <div className="inline-block font-serif font-extrabold text-6xl pt-6">
           {post.title}
         </div>
-        <div className="flex ">
+        <div className="flex pt-10">
           <div className="w-9/12">
             <div className="flex items-center gap-3 pt-10">
               <img
