@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import bg from "./assets/login-left.jpg";
 import glogo from "./assets/google.svg";
 import { useUserAuth } from "./utils/auth/firebase-auth-context";
@@ -68,24 +67,24 @@ function Login() {
                   ></input>
                   <div>Remember me</div>
                 </div>
-                <div>
+                {/* <div>
                   <Link to="/reset">Forgot your password?</Link>
-                </div>
+                </div> */}
               </div>
               <button
                 type="submit"
-                className="text-lg w-full pt-4 pb-4 mt-10 text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-full px-5 py-2.5 text-center mr-2 mb-2"
+                className="text-lg w-full pt-4 pb-4 mt-10 text-gray-700 focus:outline-none bg-amber-400 border border-gray-200 hover:bg-amber-500 focus:z-10 focus:ring-4 focus:ring-gray-200 font-medium rounded-full px-5 py-2.5 text-center mr-2 mb-2"
               >
                 Sign in
               </button>
             </form>
             <br />
-            <div className="mt-3 mb-5">
+            {/* <div className="mt-3 mb-5">
               Don't have an account?
               <Link to="/register" className="text-blue-600">
                 Register now.
               </Link>
-            </div>
+            </div> */}
             <div className="flex justify-center items-center h-10">
               <hr className="w-10" />
               <div className="text-gray-400">or continute with</div>
