@@ -1,7 +1,7 @@
 import axios from "axios";
 import { auth } from "../../utils/auth/firebase";
 export const api = axios.create({
-  baseURL: process.env.REACT_APP_BASEAPI_URL,
+  baseURL: import.meta.env.VITE_BACKEND_API_URL,
   withCredentials: true,
 });
 
@@ -23,6 +23,7 @@ api.interceptors.response.use(undefined, (error) => {
   return errorHandler(error);
 });
 api.interceptors.request.use(async (config) => {
+  console.log(import.meta.env.VITE_BACKEND_API_URL)
   let token = "";
   if (auth.currentUser) {
     token = await auth.currentUser.getIdToken();

@@ -1,26 +1,12 @@
 import { CKEditor } from "@ckeditor/ckeditor5-react";
-import Editor from "ckeditor5-custom-build/build/ckeditor";
+import "ckeditor5-custom-build/build/ckeditor";
 import CustomUploadAdapterPlugin from "./custom-upload-adapter";
 export default function AdminEditor({
   toolbarRef,
   editorData,
   onWriterChange,
 }) {
-  // const editorConfiguration = {
-  //   simpleUpload: {
-  //     // The URL that the images are uploaded to.
-  //     uploadUrl: `${process.env.REACT_APP_BASEAPI_URL}/api/post/upload-editor-image`,
 
-  //     // Enable the XMLHttpRequest.withCredentials property.
-  //     withCredentials: true,
-
-  //     // Headers sent along with the XMLHttpRequest to the upload server.
-  //     headers: {
-  //       "X-CSRF-TOKEN": "CSRF-Token",
-  //       Authorization: `Bearer ${localStorage.getItem("firebase_auth_token")}`,
-  //     },
-  //   },
-  // };
   const editorConfiguration = {
     extraPlugins: [CustomUploadAdapterPlugin],
   };
@@ -29,7 +15,7 @@ export default function AdminEditor({
       <div className="max-w-2xl mx-auto h-full pt-5">
         <div className="bg-white w-[700px] h-full overflow-auto prose-lg">
           <CKEditor
-            editor={Editor}
+            editor={DecoupledDocumentEditor}
             config={editorConfiguration}
             data={editorData}
             onReady={(editor) => {
