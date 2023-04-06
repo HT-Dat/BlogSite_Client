@@ -43,8 +43,8 @@ function Home() {
               </a>
             </div>
             <div className="text-3xl pt-10">Hello, I'm</div>
-            <div className="font-serif font-extrabold text-8xl mb-10">
-              Ho Tien Dat
+            <div className="font-serif font-extrabold text-8xl my-10">
+              Hồ Tiến Đạt
             </div>
             <div className="flex gap-5 flex-col sm:flex-row w-10/12">
               <a
@@ -122,7 +122,7 @@ function Home() {
             </div>
             <div className="md:w-7/12 w-full text-lg text-justify font-karla">
               <p className="pb-5">
-                Hi, I'm Hồ Tiến Đạt, an undergraduate developer student from
+                I'm Ho Tien Dat, an undergraduate developer student from
                 Vietnam. I have been working on web development for 3 years now,
                 while still studying at university. Had my own project, coded
                 mostly in Javascript and C#.
@@ -135,10 +135,10 @@ function Home() {
                 shop's employees
               </p>
               <p>
-                I also love doing open source development, one of my them is a
-                published extension on chrome web store made with Javascript
-                with over 20k+ users. It gives me a wonderful feeling of
-                achievement and joy which I cannot explain in words.
+                I also love doing open-source development, one of them is a
+                published extension on Chrome web store made with Javascript
+                with over 40.000+ users. It gives me a wonderful feeling of joy
+                which I cannot explain in words.
               </p>
             </div>
           </div>
