@@ -1,9 +1,6 @@
 function BigTitle() {
   return (
     <div className="p-3">
-      <div className="inline-block font-serif font-extrabold lg:text-5xl text-xl z-10">
-        “Truth can only be found in one place:
-      </div>
       <div className="inline-grid grid-cols-1">
         <div className="inline-block font-serif font-extrabold lg:text-5xl text-xl z-10">
           “Truth can only be found in one place:
