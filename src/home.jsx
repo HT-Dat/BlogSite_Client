@@ -6,6 +6,7 @@ import {
   AiOutlinePushpin,
   AiFillChrome,
 } from "react-icons/ai";
+import { IoExtensionPuzzleOutline } from "react-icons/io5";
 import { BsFacebook } from "react-icons/bs";
 import { FaReact, FaDocker } from "react-icons/fa";
 import { SiDotnet } from "react-icons/si";
@@ -14,8 +15,15 @@ import MyAvatar from "./assets/my-picture-2.png";
 import ExtensionImg1 from "./assets/coursera-extension-1.png";
 import ExtensionImg2 from "./assets/coursera-extension-2.png";
 import ExtensionImg3 from "./assets/coursera-extension-3.png";
-import HomeNavbar from "./navbar/home-navbar";
+import ProjectImg1 from "./assets/project-1.gif";
+import ProjectImg2 from "./assets/project-2.gif";
+import ProjectImg3 from "./assets/project-3.jpg";
+import HomeFooter from "./blogs/home-footer";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 function Home() {
+  const [isHoverTank, setHoverTank] = useState(false);
+  const [isHoverEx, setHoverEx] = useState(false);
   return (
     <>
       <div
@@ -76,7 +84,7 @@ function Home() {
           Things I focus on...
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-2 xl:gap-32 w-9/12 ">
-          <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-125 duration-300 rounded-xl m-5 shadow-md flex flex-col items-center">
+          <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-125 duration-300 rounded-md m-5 shadow-md flex flex-col items-center">
             <div className="bg-gradient-to-br from-yellow-200 via-yellow-400 to-yellow-400 rounded-full flex items-center justify-center w-32 h-32">
               <FaReact className="text-6xl " />
             </div>
@@ -88,7 +96,7 @@ function Home() {
               the most to build frontend for my projects.
             </div>
           </div>
-          <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-125 duration-300 rounded-xl m-5 shadow-md flex flex-col items-center">
+          <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-125 duration-300 rounded-md m-5 shadow-md flex flex-col items-center">
             <div className="bg-gradient-to-br from-yellow-200 via-yellow-400 to-yellow-400 rounded-full flex items-center justify-center w-32 h-32">
               <SiDotnet className="text-6xl " />
             </div>
@@ -101,7 +109,7 @@ function Home() {
               other backend tasks.
             </div>
           </div>
-          <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-125 duration-300 rounded-xl m-5 shadow-md flex flex-col items-center">
+          <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-125 duration-300 rounded-md m-5 shadow-md flex flex-col items-center">
             <div className="bg-gradient-to-br from-yellow-200 via-yellow-400 to-yellow-400 rounded-full flex items-center justify-center w-32 h-32">
               <FaDocker className="text-6xl " />
             </div>
@@ -150,10 +158,158 @@ function Home() {
           <div>Personal project</div>
           <AiOutlinePushpin className="text-5xl ml-3" />
         </div>
-        <div className="bg-amber-300 m-5 w-full -skew-y-3 grid grid-rows-1 place-items-center overflow-hidden">
-          <div className="h-full w-fit py-6 px-4 bg-none sm:p-6 md:px-48 md:py-10">
-            <div className="skew-y-3 max-w-4xl mx-auto grid grid-cols-1 lg:max-w-7xl lg:gap-x-20 lg:grid-cols-2">
-              <div className="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
+        <div className="bg-amber-300 w-full mt-5 -skew-y-3 overflow-hidden">
+          <div className="mx-auto max-w-7xl skew-y-3">
+            <div className="flex justify-center pt-32 pb-10 gap-10">
+              <div className="bg-gray-900 pb-5 h-[650px] w-[400px] text-white flex flex-col justify-end items-center hover:shadow-black hover:shadow-lg transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-105 shadow-md shadow-black">
+                <img src={ProjectImg3} className="h-full object-cover" />
+                <div className="text-2xl p-5 font-bold">
+                  Personal blog management
+                </div>
+                <div className="text-md pb-5">A Fullstack Web App</div>
+                <div className="p-5 text-xl">
+                  (.NET, SQL Server, ReactJS, Docker)
+                </div>
+                <div className="flex gap-5">
+                  <Link
+                    to="blog"
+                    className="text-2xl px-4 py-2 border-2 border-white hover:text-black hover:bg-white transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-125"
+                  >
+                    VISIT
+                  </Link>
+                  <a
+                    href="https://github.com/HT-Dat/blogsite_client"
+                    onClick={() => {
+                      window.open("https://github.com/HT-Dat/blogsite_server");
+                    }}
+                    // onclick="window.open('https://github.com/HT-Dat/blogsite_client'); return true;"
+                    // href="https://github.com/HT-Dat/blogsite_server"
+                    className="text-2xl px-4 py-2 border-2 border-white hover:text-black hover:bg-white transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-125"
+                  >
+                    CODE
+                  </a>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-10">
+                <div
+                  onMouseOver={() => {
+                    setHoverTank(true);
+                  }}
+                  onMouseOut={() => {
+                    setHoverTank(false);
+                  }}
+                  className="w-80 h-96 bg-slate-200 hover:shadow-black hover:shadow-lg transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-105 shadow-md shadow-black/40"
+                >
+                  <img
+                    src={ProjectImg2}
+                    className="absolute hover:opacity-0 object-cover w-80 h-96 z-10 -hue-rotate-90 rotate-180"
+                  />
+                  <img
+                    src={ProjectImg1}
+                    className="object-cover h-full -hue-rotate-90 overflow-hidden rotate-180"
+                  />
+                  <div className="relative -top-20 z-30 h-0">
+                    <div className="h-20 text-xl bg-gray-900 font-bold text-white flex items-center justify-center">
+                      FLAT STEEL
+                    </div>
+                  </div>
+                  <div
+                    className={
+                      "bg-gray-900 w-80 text-white shadow-lg " +
+                      (isHoverTank ? "opacity-100" : "opacity-0")
+                    }
+                  >
+                    <div className="flex flex-col gap-3 p-3 items-center">
+                      <div className="text-center">
+                        A multiplayer Unity game that can co-op up to 4 players
+                        at the same time
+                      </div>
+                      <div className="flex gap-5">
+                        <Link
+                          to="https://github.com/HT-Dat/Unity-Flat-Steel"
+                          className=" flex items-center justify-center text-lg px-3 py-1 border-2 border-white hover:text-black hover:bg-white transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-125"
+                        >
+                          Code <AiFillGithub className="text-2xl ml-2" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="w-80 h-96 hover:shadow-black hover:shadow-lg transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-105 shadow-md shadow-black/40"
+                  onMouseOver={() => {
+                    setHoverEx(true);
+                  }}
+                  onMouseOut={() => {
+                    setHoverEx(false);
+                  }}
+                >
+                  <img
+                    src={ExtensionImg3}
+                    className="absolute w-12 h-12 mt-8"
+                  />
+                  <img src={ExtensionImg2} />
+                  <div className="text-xl font-bold flex justify-center items-center h-20 p-1 bg-gray-900 text-white w-full">
+                    Coursera Get Shareable Link
+                  </div>
+                  <div
+                    className={
+                      "bg-gray-900 w-80 text-white shadow-lg " +
+                      (isHoverEx ? "opacity-100" : "opacity-0")
+                    }
+                  >
+                    <div className="flex flex-col gap-3 px-3 pb-3 items-center">
+                      <div className="">
+                        A simple yet useful extension for Coursera learners to
+                        get links to your submission. Currently, the extension
+                        is having 40.000+ users and keeps growing
+                      </div>
+                      <div className="flex gap-5">
+                        <Link
+                          to="https://chrome.google.com/webstore/detail/coursera-get-shareable-li/fbplppipepefackdlimggnjogpdamlhn"
+                          className=" flex items-center justify-center text-lg px-1 py-1 border-2 border-white hover:text-black hover:bg-white transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-125"
+                        >
+                          Web store <AiFillChrome className="text-2xl ml-2" />
+                        </Link>
+                        <Link
+                          to="https://github.com/HT-Dat/chrome-extension-coursera-getter"
+                          className=" flex items-center justify-center text-lg px-1 py-1 border-2 border-white hover:text-black hover:bg-white transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-125"
+                        >
+                          Code <AiFillGithub className="text-2xl ml-2" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-span-2 h-60 w-[700px] text-xl text-justify font-karla">
+                  <p className="flex h-full items-end">
+                    As a passionate developer, I am continuously working on
+                    various personal projects that allow me to explore new
+                    technologies, hone my skills, and express my creativity. By
+                    delving into my personal projects, you will gain insight
+                    into my interests, my approach to problem-solving, and my
+                    commitment to creating engaging and innovative applications.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-full h-0">
+            <div className="relative bg-white skew-y-6 h-96 w-full -top-72 -z-10"></div>
+          </div>
+        </div>
+
+        <div className="w-full relative top-20">
+          <HomeFooter />
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Home;
+{
+  /* <div className="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
                 <h1 className="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl ">
                   Coursera Get Shareable Link
                 </h1>
@@ -169,11 +325,11 @@ function Home() {
                   alt=""
                   className="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full"
                 />
-                {/* <img
+                <img
                   src={ExtensionImg3}
                   alt=""
                   className="hidden w-full h-52 object-contain rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32"
-                /> */}
+                />
               </div>
               <dl className="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
                 <dt className="sr-only">Reviews</dt>
@@ -234,46 +390,5 @@ function Home() {
                   Currently, the extension is getting 40.000+ users and keeps
                   growing
                 </p>
-              </div>
-            </div>
-          </div>
-          {/* <div className="w-[900px] h-[320px] m-20 skew-y-3">
-            <div className="absolute w-[500px] h-80 bg-white rounded-lg shadow-3xl">
-              <div className="w-10/12 pt-10 pl-10 text-lg font-karla">
-                <p className="text-justify">
-                  Made with Javascript, Coursera Get Shareable Link is a simple
-                  yet useful extension for Coursera learners to get links to
-                  your submission. This help speed up the grading process since
-                  you can invite a mentor or other people to grade your
-                  submission.
-                </p>
-                <p className="">
-                  Currently, the extension is getting 20k+ users and keeps
-                  growing
-                </p>
-                <div className="flex w-full">
-                  <a
-                    href="https://chrome.google.com/webstore/detail/coursera-get-shareable-li/fbplppipepefackdlimggnjogpdamlhn"
-                    target="_blank"
-                    className="flex items-center border-yellow-400 border-2 rounded-full h-14 p-5 m-5"
-                  >
-                    Chrome web store
-                    <AiFillChrome className="text-2xl" />
-                  </a>
-                  <div className="border-yellow-400 border-2 rounded-full h-10"></div>
-                </div>
-              </div>
-            </div>
-            <div className="border-2 border-sky-900 overflow-hidden shadow-3xl mt-8 mr-9 mb-9 ml-[450px] absolute aspect-video h-64 bg-sky-900 rounded-lg">
-              <img
-                src={ExtensionImg}
-                className="object-contain h-full w-full rounded-lg"
-              />
-            </div>
-          </div> */}
-        </div>
-      </div>
-    </>
-  );
+              </div> */
 }
-export default Home;
