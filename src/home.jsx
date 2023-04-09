@@ -57,7 +57,7 @@ function Home() {
             <div className="flex gap-5 flex-col sm:flex-row w-10/12">
               <a
                 target="_blank"
-                href="https://hotiendat.com/public_assets/CV_SE151249_HO%20TIEN%20DAT.pdf"
+                href="https://firebasestorage.googleapis.com/v0/b/hotiendat-blog.appspot.com/o/CV-Ho-Tien-Dat.pdf?alt=media"
                 className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-amber-200 duration-300 shadow-lg flex content-center bg-amber-300 p-5 font-bold"
               >
                 <div>DOWNLOAD CV</div>
@@ -130,7 +130,7 @@ function Home() {
             </div>
             <div className="md:w-7/12 w-full text-lg text-justify font-karla">
               <p className="pb-5">
-                I'm Ho Tien Dat, an undergraduate developer student from
+                I'm Ho Tien Dat, a graduate software developer student from
                 Vietnam. I have been working on web development for 3 years now,
                 while still studying at university. Had my own project, coded
                 mostly in Javascript and C#.
