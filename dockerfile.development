@@ -1,16 +1,38 @@
 # ==== CONFIGURE =====
-# Use a Node 16 base image
-FROM node:lts-alpine3.17
-# Set the working directory to /app inside the container
+# # Use a Node 16 base image
+# FROM node:lts-alpine3.17
+# # Set the working directory to /app inside the container
+# WORKDIR /app
+# # Copy app files
+# # Copy app dependencies to container
+# COPY ./package.json ./
+# # Add `/app/node_modules/.bin` to $PATH
+# ENV PATH /app/node_modules/.bin:$PATH
+# # Install dependencies
+# RUN npm install --legacy-peer-deps
+# # Fix permission issues
+# RUN mkdir node_modules/.cache && chmod -R 777 node_modules/.cache
+# # Deploy app for local development
+# CMD npm run start -- --host
+
+
+# ---- Dependencies ----
+FROM node:lts-alpine3.17 AS dependencies
 WORKDIR /app
-# Copy app files
-# Copy app dependencies to container
-COPY ./package.json ./
-# Add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
-# Install dependencies
-RUN npm install --legacy-peer-deps
-# Fix permission issues
-RUN mkdir node_modules/.cache && chmod -R 777 node_modules/.cache
-# Deploy app for local development
+COPY package*.json ./
+# install node packages
+RUN npm set progress=false && npm config set depth 0
+RUN npm install
+# copy production node_modules aside
+RUN cp -R node_modules prod_node_modules
+
+#
+# ---- Release ----
+FROM node:lts-alpine3.17 AS release
+WORKDIR /app
+# copy production node_modules
+COPY --from=dependencies /app/prod_node_modules ./node_modules
+# copy app sources
+COPY . .
+# expose port and define CMD
 CMD npm start
