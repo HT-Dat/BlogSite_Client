@@ -5,6 +5,7 @@ module.exports = {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
         karla: ["Karla", "sans-serif"],
+        serif: ["Times New Roman"],
       },
       boxShadow: {
         "3xl": "15px 15px 10px 0px rgba(0, 0, 0, 0.3)",
